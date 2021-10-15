@@ -1,5 +1,7 @@
 var express = require("express");
 var router = express.Router();
-const path = require("path");
 
+router.get("/example", (req, res) => {
+  res.send(process.env.API_KEY);
+});
 module.exports.router = router;

@@ -2,7 +2,7 @@
   "name": "compassapp",
   "version": "1.0.0",
   "description": "",
-  "main": "webpack.config.js",
+  "main": "index.js",
   "scripts": {
     "start": "nodemon server",
     "build": "webpack --mode development --watch"
@@ -23,6 +23,7 @@
     "@babel/preset-react": "^7.14.5",
     "babel-loader": "^8.2.2",
     "css-loader": "^6.4.0",
+    "dotenv-webpack": "^7.0.3",
     "style-loader": "^3.3.0",
     "webpack": "^5.58.2",
     "webpack-cli": "^4.9.0"
@@ -31,6 +32,7 @@
     "axios": "^0.23.0",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "google-map-react": "^2.1.10",
     "mongoose": "^6.0.11",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
