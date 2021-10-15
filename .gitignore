@@ -1,0 +1,7 @@
+.env
+node_modules
+.DS*
+dist/*
+!dist/index.html
+config.js
+.vscode/
