@@ -1,11 +1,10 @@
 import GoogleMapReact from "google-map-react";
 import React, { useState } from "react";
 const API_KEY = process.env.API_KEY;
-// not working right now, unable to get webpack dotenv package to work
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
-let GoogleMap = () => {
+let GoogleMap = (props) => {
   let [lat, setLat] = useState(40.7128);
   let [lng, setLng] = useState(-74.006);
   let [zoom, setZoom] = useState(11);
@@ -15,6 +14,7 @@ let GoogleMap = () => {
         bootstrapURLKeys={{ key: API_KEY }}
         defaultCenter={[lat, lng]}
         defaultZoom={zoom}
+        display="satellite"
       >
         <AnyReactComponent lat={lat} lng={lng} text="My Marker" />
       </GoogleMapReact>

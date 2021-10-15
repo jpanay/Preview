@@ -1,32 +1,14 @@
 import React from "react";
+import Listing from "./Listing";
 
-let Listings = () => {
+let Listings = (props) => {
   return (
     <div>
-      <div id="sidebar-1" className="sidebar">
-        <p className="label">Sidebar 1</p>
-        <div id="addLocation">
-          <input type="text" />
-          <button>ADD</button>
-        </div>
-        <div className="object">300 East 31st Street</div>
-        <div>11 units | 9 occupied | 2 vacant</div>
-        <div className="object">24 7th Avenue</div>
-        <div>224 units | 192 occupied | 22 vacant</div>
-        <div className="object">17 West 26th Street</div>
-        <div>62 units | 39 occupied | 23 vacant</div>
+      <div id="listings" className="sidebar listings">
+        {props.listings.map(function(listing, i){
+          return <Listing obj={listing} key={i} listing={listing} />;
+        })}
       </div>
-      <div id="sidebar-2" className="sidebar">
-        <p className="label">Sidebar 2 - EDIT </p>
-        <div className="object">Unit: 2B | $2400 | 2 bed | 1 bath | Occupied</div>
-        <div>Here is a description of the property and info</div>
-        <div>Potentially will be auto generated hmmm?</div>
-        <div className="object">Unit: 2D | $2400 | 3 bed | 2 bath | Occupied</div>
-        <div className="object">Unit: 2C | $2400 | 2 bed | 1 bath | Occupied</div>
-        <div className="object">Unit: 3A | $2400 | 1 bed | 1 bath | Unoccupied</div>
-      </div>
-
-      <div id="mapid"></div>
     </div>
   );
 };

@@ -1,0 +1,9 @@
+.listing {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.listing-field {
+  padding: 0px 2px;
+  border: 1px solid grey;
+}
