@@ -1,6 +1,6 @@
 import GoogleMapReact from "google-map-react";
 import React, { useState } from "react";
-// const API_KEY = process.env.API_KEY;
+const API_KEY = process.env.API_KEY;
 // not working right now, unable to get webpack dotenv package to work
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
