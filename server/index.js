@@ -9,7 +9,7 @@ const API_KEY = process.env.API_KEY2;
 
 app.use(express.json());
 
-app.use(express.static(path.join(__dirname, "..", "dist")));
+app.use(express.static(__dirname + "/../dist"));
 
 app.use("/", router);
 
