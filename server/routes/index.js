@@ -1,15 +1,7 @@
 var express = require("express");
 var router = express.Router();
 
-router.get("/listings", (req, res) => {
-  res.send('Listing Data');
+router.get("/example", (req, res) => {
+  res.send(process.env.API_KEY);
 });
-
-router.post("/listings", (req, res) => {
-});
-
-router.put("/listings", (req, res) => {
-});
-
-
 module.exports.router = router;

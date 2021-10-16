@@ -3,8 +3,8 @@ import Listing from "./Listing";
 
 let Listings = (props) => {
   return (
-    <div>
-      <div id="listings" className="sidebar listings">
+    <div id="listings-wrapper">
+      <div id="listings" className="listings">
         {props.listings.map(function(listing, i){
           return <Listing obj={listing} key={i} listing={listing} />;
         })}

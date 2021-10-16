@@ -1,3 +1,22 @@
 .listings {
+  display: flex;
+  flex-flow: column nowrap;
   height: 100%;
+  text-align: center;
+}
+
+.location {
+  width: 50%;
+}
+.unit {
+  width: 10%;
+}
+.price {
+  width: 20%;
+}
+.beds {
+  width: 10%;
+}
+.baths {
+  width: 10%;
 }

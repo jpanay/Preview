@@ -8,7 +8,7 @@ let Listing = (props) => {
       <div className="listing-field price">${props.listing.price}</div>
       <div className="listing-field beds">{props.listing.beds}</div>
       <div className="listing-field baths">{props.listing.baths}</div>
-      <div className="listing-field description">{props.listing.description}</div>
+      {/* <div className="listing-field description">{props.listing.description}</div> */}
     </div>  
   )
 }

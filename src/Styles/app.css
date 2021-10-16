@@ -4,6 +4,13 @@ body {
   font-weight: 200;
 }
 
+#main {
+  display: flex;
+  flex-flow: row nowrap;
+  height: 93%;
+  width: 100%;
+}
+
 #nav {
   height: 7%;
   display: flex;
@@ -16,21 +23,22 @@ body {
   cursor: pointer;
 }
 
-#main {
-  display: flex;
-  flex-flow: row nowrap;
-  /* background-color: rgb(203, 255, 238); */
-  height: 93%;
+#listings-wrapper {
+  width: 60%;
 }
 
-.sidebar {
-  flex-grow: 1;
+#listings {
   padding: 0px 8px;
   background-color: antiquewhite;
   border: 1px solid grey;
 }
 
-#mapid {
-  flex-grow: 6;
+#map-wrapper {
+  width: 30%;
 }
+
+#map {
+}
+
+
 

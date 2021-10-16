@@ -16,8 +16,8 @@ class App extends React.Component {
   componentDidMount() {
     console.log('Mounting')
     this.setState({listings: MockData});
-    // axios.get('listings')
-    //   .then((res) => { console.log(res) })
+    axios.get('listings')
+      .then((res) => { console.log(res) })
   }
 
   render() {
