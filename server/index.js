@@ -10,16 +10,6 @@ const API_KEY = process.env.API_KEY;
 app.use(express.json());
 app.use(express.static(__dirname + "/../dist"));
 
-app.get("/listings", (req, res) => {
-  res.send('Listing Data');
-});
-
-app.post("/listings", (req, res) => {
-});
-
-app.put("/listings", (req, res) => {
-});
-
 app.listen(port, () => {
   console.log(`Example app listening at Port ${port}`);
 });
