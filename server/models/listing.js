@@ -3,7 +3,7 @@ const { Schema } = mongoose;
 
 const listingSchema = new Schema({
   manager: String,
-  location: String,
+  address: String,
   area: String,
   zipcode: String,
   position: Object,

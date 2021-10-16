@@ -11,21 +11,21 @@ let Listings = (props) => {
       </div>
 
       <div className="add-listing">
-        <input className="listing-input" placeholder="location"/>
-        <input className="listing-input" placeholder="unit"/>
-        <input className="listing-input" placeholder="price"/>
-        <input className="listing-input" placeholder="beds"/>
-        <input className="listing-input" placeholder="baths"/>
+        <input className="" placeholder="address"/>
+        <input className="" placeholder="unit"/>
+        <input className="" placeholder="price"/>
+        <input className="" placeholder="beds"/>
+        <input className="" placeholder="baths"/>
         <button>ADD</button>
       </div>
 
       <div id="listings" className="listings">
         <div className="listing listing-header">
-          <div className="listing-field location">Location</div>
-          <div className="listing-field unit">Unit</div>
-          <div className="listing-field price">Price</div>
-          <div className="listing-field beds">Bed</div>
-          <div className="listing-field baths">Bath</div>
+          <div className="address">Address</div>
+          <div className="unit">Unit</div>
+          <div className="price">Price</div>
+          <div className="beds">Bed</div>
+          <div className="baths">Bath</div>
         </div> 
 
         {props.listings.map(function(listing, i){
