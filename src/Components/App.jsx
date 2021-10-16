@@ -26,7 +26,7 @@ class App extends React.Component {
         <Navigation />
         <div id="main">
           <Listings listings={this.state.listings}/>
-          <GoogleMap />
+          <GoogleMap listings={this.state.listings}/>
         </div>
       </>
     );

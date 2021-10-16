@@ -1,5 +1,6 @@
 import GoogleMapReact from "google-map-react";
 import React, { useState } from "react";
+import Marker from "./Marker"
 const API_KEY = process.env.API_KEY;
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
@@ -16,7 +17,10 @@ let GoogleMap = (props) => {
         defaultCenter={[lat, lng]}
         defaultZoom={zoom}
       >
-        <AnyReactComponent lat={lat} lng={lng} text="My Marker" />
+        {props.listings.map(function(listing, i){
+          return <Marker obj={listing} key={i} listing={listing} lat={listing.position.lat} lng={listing.position.lng} />;
+        })}
+        {/* <AnyReactComponent lat={lat} lng={lng} text="My Marker" /> */}
       </GoogleMapReact>
     </div>
   );

@@ -40,5 +40,8 @@ body {
 #map {
 }
 
-
-
+.marker {
+  background-color: aqua;
+  width: 64px;
+  border: 1px solid green;
+}

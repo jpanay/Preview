@@ -1,6 +1,6 @@
 const listingData = [
   {
-    location: '280 9th Avenue, Manhattan',
+    location: '280 9th Avenue',
     manager: 'XYZ Properties',
     position: { lat: 40.76, lng: -74 },
     unit: '2D',
@@ -10,7 +10,7 @@ const listingData = [
     description: 'Very nice place',
   },
   {
-    location: '330 4th Street, Manhattan',
+    location: '330 4th Street',
     manager: 'XYZ Properties',
     position: { lat: 40.73, lng: -73.99 },
     unit: '2D',
@@ -20,7 +20,7 @@ const listingData = [
     description: 'Very nice place',
   },
   {
-    location: '11 Blah Blah Lane, Manhattan',
+    location: '11 Blah Blah Lane',
     manager: 'XYZ Properties',
     position: { lat: 40.758, lng: -73.98 },
     unit: '2D',
