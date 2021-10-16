@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
 const listingSchema = new Schema({
@@ -14,9 +14,9 @@ const listingSchema = new Schema({
   description: String,
   occupied: Boolean,
   previewed: Boolean,
-  listed: Boolean
+  listed: Boolean,
 });
 
-const Listing = mongoose.model('Listing', listingSchema);
+const Listing = mongoose.model("Listing", listingSchema);
 
-module.exports = Listing
+module.exports = Listing;

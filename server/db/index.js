@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const url = "mongodb://mongo:27017";
+const url = "mongodb://localhost:27017/preview";
 mongoose.Promise = Promise;
 
 mongoose
