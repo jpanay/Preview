@@ -36,7 +36,9 @@ body {
 #map-wrapper {
   width: 30%;
 }
-
+#info-tab-wrapper {
+  width: 40%;
+}
 #map {
 }
 
