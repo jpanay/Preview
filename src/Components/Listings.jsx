@@ -6,11 +6,12 @@ import FilterListings from "./FilterListings";
 let Listings = ({ listings, selectListing }) => {
   return (
     <div id="listings-wrapper">
-      <div>FILTER:</div>
+      <div>PREVIEW</div>
+      <div>Filter:</div>
       <FilterListings />
-      <div>ADD LISTING:</div>
+      <div>Add Listing:</div>
       <AddListing />
-      
+      <div>All Listings:</div>
       <div id="listings" className="container listings">
         <div className="row align-items-start listing-header">
           <div className="col-4 address">Address</div>
