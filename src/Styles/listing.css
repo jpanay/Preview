@@ -1,6 +1,12 @@
 .listing {
   display: flex;
   flex-flow: row nowrap;
+
+}
+.listing:not(.listing-header):hover   {
+  cursor: pointer;
+  color: white;
+  background-color: black;
 }
 
 .listing-field {

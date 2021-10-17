@@ -1,21 +1,20 @@
 import React from "react";
 import Listing from "./Listing";
 
-let Listings = (props) => {
+let Listings = ({ listings, selectListing }) => {
   return (
     <div id="listings-wrapper">
-
       <div className="listing-controls">
         <div className="listing-control">Edit</div>
         <div className="listing-control">Add</div>
       </div>
 
       <div className="add-listing">
-        <input className="" placeholder="address"/>
-        <input className="" placeholder="unit"/>
-        <input className="" placeholder="price"/>
-        <input className="" placeholder="beds"/>
-        <input className="" placeholder="baths"/>
+        <input className="" placeholder="address" />
+        <input className="" placeholder="unit" />
+        <input className="" placeholder="price" />
+        <input className="" placeholder="beds" />
+        <input className="" placeholder="baths" />
         <button>ADD</button>
       </div>
 
@@ -26,12 +25,18 @@ let Listings = (props) => {
           <div className="price">Price</div>
           <div className="beds">Bed</div>
           <div className="baths">Bath</div>
-        </div> 
+        </div>
 
-        {props.listings.map(function(listing, i){
-          return <Listing obj={listing} key={i} listing={listing} />;
+        {listings.map(function (listing, i) {
+          return (
+            <Listing
+              selectListing={selectListing}
+              obj={listing}
+              key={i}
+              listing={listing}
+            />
+          );
         })}
-        
       </div>
     </div>
   );

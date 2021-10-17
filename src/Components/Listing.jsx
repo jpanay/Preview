@@ -1,16 +1,16 @@
 import React from "react";
 
-let Listing = (props) => {
+let Listing = ({ listing, selectListing }) => {
   return (
-    <div className="listing">
-      <div className="listing-field address">{props.listing.address}</div>
-      <div className="listing-field unit">{props.listing.unit}</div>
-      <div className="listing-field price">${props.listing.price}</div>
-      <div className="listing-field beds">{props.listing.beds}</div>
-      <div className="listing-field baths">{props.listing.baths}</div>
+    <div onClick={() => selectListing(listing._id)} className="listing">
+      <div className="listing-field address">{listing.address}</div>
+      <div className="listing-field unit">{listing.unit}</div>
+      <div className="listing-field price">${listing.price}</div>
+      <div className="listing-field beds">{listing.beds}</div>
+      <div className="listing-field baths">{listing.baths}</div>
       {/* <div className="listing-field description">{props.listing.description}</div> */}
-    </div>  
-  )
-}
+    </div>
+  );
+};
 
-export default Listing
+export default Listing;

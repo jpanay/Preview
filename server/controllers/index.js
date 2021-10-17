@@ -3,3 +3,5 @@
 2.Will call on a model function
 3. will respond to the route request with the return from model function
 */
+
+exports.listings = require("./listings.js");
