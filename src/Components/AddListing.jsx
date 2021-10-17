@@ -6,17 +6,17 @@ class AddListing extends React.Component {
     super(props);
     this.state = {
       manager: 'XYZ Properties',
-      address: 'Manhattan',
-      area: '',
+      address: '200 w 4th street',
+      area: 'Manhattan',
       zipcode: '',
-      position: {},
-      unit: '',
-      price: '',
-      beds: '',
-      baths: '',
+      position: { lat: 40.75, lng: -74.01},
+      unit: '3d',
+      price: 4000,
+      beds: 2,
+      baths: 1,
       description: '',
       occupied: false,
-      previewed: false,
+      previewed: true,
       listed: false,
     };
 
@@ -36,12 +36,11 @@ class AddListing extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log(this.state)
     axios
-      .post("/listings", this.state.value)
+      .post("/listings", { newListing: this.state })
       .then(({ data }) => {
         console.log(data);
-        this.setState({ listings: data });
+        // this.setState({ listings: data });
       })
       .catch((err) => console.log(err));
   }
