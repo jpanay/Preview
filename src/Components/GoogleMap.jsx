@@ -1,7 +1,7 @@
 import GoogleMapReact from "google-map-react";
 import React, { useState } from "react";
 import Marker from "./Marker"
-const API_KEY = process.env.API_KEY;
+const GOOGLE_API_KEY = process.env.GOOGLE_API_KEY;
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
@@ -13,7 +13,7 @@ let GoogleMap = (props) => {
     <div style={{ height: "100vh", width: "100%" }} id="map-wrapper">
       <GoogleMapReact
         id="map"
-        bootstrapURLKeys={{ key: API_KEY }}
+        bootstrapURLKeys={{ key: GOOGLE_API_KEY }}
         defaultCenter={[lat, lng]}
         defaultZoom={zoom}
       >
