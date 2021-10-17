@@ -6,7 +6,9 @@ import FilterListings from "./FilterListings";
 let Listings = ({ listings, selectListing }) => {
   return (
     <div id="listings-wrapper">
+      <div>FILTER:</div>
       <FilterListings />
+      <div>ADD LISTING:</div>
       <AddListing />
       
       <div id="listings" className="listings">
