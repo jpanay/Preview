@@ -1,14 +1,7 @@
 import React from "react";
 import Listing from "./Listing";
-import axios from "axios";
 
-let Listings = (props) => {
-  let checkMongo = () => {
-    axios
-      .get("/listings")
-      .then(({ data }) => console.log(data))
-      .catch((err) => console.log(err));
-  };
+let Listings = ({ listings, selectListing }) => {
   return (
     <div id="listings-wrapper">
       <div className="listing-controls">
@@ -34,11 +27,16 @@ let Listings = (props) => {
           <div className="baths">Bath</div>
         </div>
 
-        {props.listings.map(function (listing, i) {
-          return <Listing obj={listing} key={i} listing={listing} />;
+        {listings.map(function (listing, i) {
+          return (
+            <Listing
+              selectListing={selectListing}
+              obj={listing}
+              key={i}
+              listing={listing}
+            />
+          );
         })}
-
-        <button onClick={checkMongo}> Click Me </button>
       </div>
     </div>
   );

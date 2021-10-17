@@ -3,6 +3,7 @@ import React from "react";
 import Navigation from "./Navigation";
 import GoogleMap from "./GoogleMap";
 import Listings from "./Listings";
+import InfoTab from "./InfoTab";
 // import MockData from "../mockData";
 // using data from db. can uncomment to use mockdata again
 class App extends React.Component {
@@ -10,7 +11,16 @@ class App extends React.Component {
     super(props);
     this.state = {
       listings: [],
+      selectedListing: {},
     };
+    this.selectListing = this.selectListing.bind(this);
+  }
+  selectListing(id) {
+    for (let listing of this.state.listings) {
+      if (listing._id === id) {
+        this.setState({ selectedListing: listing });
+      }
+    }
   }
 
   componentDidMount() {
@@ -30,7 +40,11 @@ class App extends React.Component {
       <>
         <Navigation />
         <div id="main">
-          <Listings listings={this.state.listings} />
+          <Listings
+            selectListing={this.selectListing}
+            listings={this.state.listings}
+          />
+          <InfoTab selectedListing={this.state.selectedListing} />
           <GoogleMap listings={this.state.listings} />
         </div>
       </>
