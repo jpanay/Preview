@@ -4,6 +4,7 @@ const { Schema } = mongoose;
 const listingSchema = new Schema({
   manager: String,
   address: String,
+  full_address: String,
   area: String,
   zipcode: String,
   position: Object,
