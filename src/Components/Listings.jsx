@@ -1,5 +1,6 @@
 import React from "react";
 import Listing from "./Listing";
+import AddListing from "./AddListing";
 
 let Listings = ({ listings, selectListing }) => {
   return (
@@ -9,15 +10,8 @@ let Listings = ({ listings, selectListing }) => {
         <div className="listing-control">Add</div>
       </div>
 
-      <div className="add-listing">
-        <input className="" placeholder="address" />
-        <input className="" placeholder="unit" />
-        <input className="" placeholder="price" />
-        <input className="" placeholder="beds" />
-        <input className="" placeholder="baths" />
-        <button>ADD</button>
-      </div>
-
+      <AddListing />
+      
       <div id="listings" className="listings">
         <div className="listing listing-header">
           <div className="address">Address</div>

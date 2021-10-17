@@ -1,9 +1,9 @@
-import axios from "axios";
 import React from "react";
 import Navigation from "./Navigation";
 import GoogleMap from "./GoogleMap";
 import Listings from "./Listings";
 import InfoTab from "./InfoTab";
+import axios from "axios";
 // import MockData from "../mockData";
 // using data from db. can uncomment to use mockdata again
 class App extends React.Component {
@@ -32,7 +32,6 @@ class App extends React.Component {
         this.setState({ listings: data });
       })
       .catch((err) => console.log(err));
-    // this.setState({ listings: MockData });
   }
 
   render() {
