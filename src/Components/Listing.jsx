@@ -8,6 +8,9 @@ let Listing = ({ listing, selectListing }) => {
       <div className="listing-field price">${listing.price}</div>
       <div className="listing-field beds">{listing.beds}</div>
       <div className="listing-field baths">{listing.baths}</div>
+      <div className="listing-field occupied">{listing.occupied.toString().toLowerCase()}</div>
+      <div className="listing-field previewed">{listing.previewed.toString().toLowerCase()}</div>
+      <div className="listing-field listed">{listing.listed.toString().toLowerCase()}</div>
       {/* <div className="listing-field description">{props.listing.description}</div> */}
     </div>
   );

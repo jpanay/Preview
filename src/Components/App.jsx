@@ -1,9 +1,9 @@
-import axios from "axios";
 import React from "react";
 import Navigation from "./Navigation";
 import GoogleMap from "./GoogleMap";
 import Listings from "./Listings";
-import InfoTab from "./InfoTab";
+import InfoModal from "./InfoModal";
+import axios from "axios";
 // import MockData from "../mockData";
 // using data from db. can uncomment to use mockdata again
 class App extends React.Component {
@@ -13,11 +13,13 @@ class App extends React.Component {
       listings: [],
       selectedListing: {},
     };
+
     this.selectListing = this.selectListing.bind(this);
     this.editListing = this.editListing.bind(this);
     this.getListings = this.getListings.bind(this);
   }
   // makes a patch request to edit the listing in the database. Then retrieves the new edited listings.
+
   editListing(listingID, editedListing) {
     axios
       .patch("/listings", {
@@ -29,11 +31,14 @@ class App extends React.Component {
   }
 
   selectListing(id) {
+    let modal = document.getElementById("info-modal-wrapper");
     for (let listing of this.state.listings) {
+      console.log(listing);
       if (listing._id === id) {
         this.setState({ selectedListing: listing });
       }
     }
+    modal.style.display = "block";
   }
 
   getListings() {
@@ -47,6 +52,7 @@ class App extends React.Component {
   componentDidMount() {
     console.log("Mounting");
     this.getListings();
+
     // this.setState({ listings: MockData });
   }
 
@@ -59,7 +65,7 @@ class App extends React.Component {
             selectListing={this.selectListing}
             listings={this.state.listings}
           />
-          <InfoTab
+          <InfoModal
             editListing={this.editListing}
             selectedListing={this.state.selectedListing}
           />

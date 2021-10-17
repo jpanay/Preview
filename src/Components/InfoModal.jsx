@@ -1,14 +1,17 @@
 import React, { useState } from "react";
 
-// InfoTab should have the ability to edit the current selected unit
+// InfoModal should have the ability to edit the current selected unit
 // needs an edit function passed in, needs a function passed in: functions need to interact with Mongo based on the id
-let InfoTab = ({ selectedListing, editListing }) => {
+let InfoModal = ({ selectedListing, editListing }) => {
   let [address, setAddress] = useState(selectedListing.address);
   let [unit, setUnit] = useState(selectedListing.unit);
   let [price, setPrice] = useState(selectedListing.price);
   let [baths, setBaths] = useState(selectedListing.baths);
   let [beds, setBeds] = useState(selectedListing.beds);
   let [description, setDescription] = useState(selectedListing.description);
+  let [occupied, setOccupied] = useState(selectedListing.occupied);
+  let [previewed, setPreviewed] = useState(selectedListing.previewed);
+  let [listed, setListed] = useState(selectedListing.listed);
   let [isEditing, setIsEditing] = useState(false);
 
   let sendEditedListing = () => {
@@ -19,13 +22,16 @@ let InfoTab = ({ selectedListing, editListing }) => {
       baths,
       beds,
       description,
+      occupied,
+      previewed,
+      listed,
     });
     setIsEditing(false);
   };
 
   return (
-    <div id="info-tab-wrapper">
-      <div className="info-tab-content">
+    <div id="info-modal-wrapper">
+      <div className="modal-content">
         <span className="close">&times;</span>
         {!isEditing ? (
           <>
@@ -35,6 +41,9 @@ let InfoTab = ({ selectedListing, editListing }) => {
             <div>{selectedListing.beds}</div>
             <div>{selectedListing.baths}</div>
             <div>{selectedListing.description}</div>
+            {/* <div>{selectedListing.occupied.toString().toLowerCase()}</div>
+            <div>{selectedListing.previewed.toString().toLowerCase()}</div>
+            <div>{selectedListing.listed.toString().toLowerCase()}</div> */}
           </>
         ) : (
           <>
@@ -83,4 +92,4 @@ let InfoTab = ({ selectedListing, editListing }) => {
   );
 };
 
-export default InfoTab;
+export default InfoModal;
