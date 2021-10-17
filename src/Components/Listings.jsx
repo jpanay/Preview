@@ -11,16 +11,16 @@ let Listings = ({ listings, selectListing }) => {
       <div>ADD LISTING:</div>
       <AddListing />
       
-      <div id="listings" className="listings">
-        <div className="listing listing-header">
-          <div className="address">Address</div>
-          <div className="unit">Unit</div>
-          <div className="price">Price</div>
-          <div className="beds">Bed</div>
-          <div className="baths">Bath</div>
-          <div className="">Occupied</div>
-          <div className="">Previewed</div>
-          <div className="">Listed</div>
+      <div id="listings" className="container listings">
+        <div className="row align-items-start listing-header">
+          <div className="col-4 address">Address</div>
+          <div className="col-1 unit">Unit</div>
+          <div className="col-2 price">Price</div>
+          <div className="col-1 beds">Bed</div>
+          <div className="col-1 baths">Bath</div>
+          <div className="col-1 occupied">Occ.</div>
+          <div className="col-1 previewed">Prev.</div>
+          <div className="col-1 listedn">List.</div>
         </div>
 
         {listings.map(function (listing, i) {
