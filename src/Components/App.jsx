@@ -51,8 +51,6 @@ class App extends React.Component {
   componentDidMount() {
     console.log("Mounting");
     this.getListings();
-
-    // this.setState({ listings: MockData });
   }
 
   render() {
