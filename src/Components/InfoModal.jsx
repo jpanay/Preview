@@ -13,6 +13,7 @@ let InfoModal = ({ selectedListing, editListing, getListings }) => {
   let [previewed, setPreviewed] = useState(selectedListing.previewed);
   let [listed, setListed] = useState(selectedListing.listed);
   let [isEditing, setIsEditing] = useState(false);
+  let [confirmDelete, setConfirmDelete] = useState(false);
 
   let closeModal = () => {
     setIsEditing(false);
@@ -21,7 +22,7 @@ let InfoModal = ({ selectedListing, editListing, getListings }) => {
 
   let deleteListing = () => {
     axios
-      .delete("/listings", { listingID: selectedListing._id })
+      .delete("/listings", { data: { listingID: selectedListing._id } })
       .then(() => getListings())
       .catch((err) => console.log(err));
     closeModal();
@@ -39,6 +40,7 @@ let InfoModal = ({ selectedListing, editListing, getListings }) => {
       previewed,
       listed,
     });
+    closeModal();
   };
 
   return (
@@ -48,17 +50,26 @@ let InfoModal = ({ selectedListing, editListing, getListings }) => {
           &times;
         </span>
         {!isEditing ? (
-          <>
-            <div>{selectedListing.address}</div>
-            <div>{selectedListing.unit}</div>
-            <div>${selectedListing.price}</div>
-            <div>{selectedListing.beds}</div>
-            <div>{selectedListing.baths}</div>
+          <div id="modal-display-wrapper">
+            <div>
+              <div>{selectedListing.address}</div>
+              <div>{selectedListing.unit}</div>
+              <div>${selectedListing.price}</div>
+              <div>{selectedListing.beds}</div>
+              <div>{selectedListing.baths}</div>
+              <div>
+                Occupied: {selectedListing.occupied === true ? "true" : "false"}
+              </div>
+              <div>
+                Previewed:{" "}
+                {selectedListing.previewed === true ? "true" : "false"}
+              </div>
+              <div>
+                Listed: {selectedListing.listed === true ? "true" : "false"}
+              </div>
+            </div>
             <div>{selectedListing.description}</div>
-            <div>{selectedListing.occupied}</div>
-            <div>{selectedListing.previewed}</div>
-            <div>{selectedListing.listed}</div>
-          </>
+          </div>
         ) : (
           <>
             <div>{selectedListing.address}</div>
@@ -114,7 +125,7 @@ let InfoModal = ({ selectedListing, editListing, getListings }) => {
               <input
                 type="checkbox"
                 name="modal-listed"
-                defaultChecked={selectedListing.previewed}
+                defaultChecked={selectedListing.listed}
                 onChange={() => setListed(!listed)}
               />
             </div>
@@ -122,15 +133,25 @@ let InfoModal = ({ selectedListing, editListing, getListings }) => {
         )}
         {isEditing ? (
           <div>
-            <button onClick={() => sendEditedListing()}>Submit</button>
+            <button onClick={sendEditedListing}>Submit</button>
             <button onClick={() => setIsEditing(false)}>Cancel</button>
           </div>
         ) : (
           <button onClick={() => setIsEditing(true)}>Edit</button>
         )}
-        <button name="Delete" onClick={deleteListing}>
-          Delete
-        </button>
+        {confirmDelete === false ? (
+          <button name="Delete" onClick={() => setConfirmDelete(true)}>
+            Delete
+          </button>
+        ) : (
+          <>
+            <div>Are you sure you want to delete this listing?</div>
+            <div>
+              <button onClick={deleteListing}>Confirm</button>
+              <button onClick={() => setConfirmDelete(false)}>Cancel</button>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );

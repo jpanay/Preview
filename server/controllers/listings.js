@@ -14,6 +14,7 @@ module.exports = {
       });
   },
   deleteListing: (req, res) => {
+    console.log(req);
     return listing
       .deleteListing(req.body.listingID)
       .then(() => res.send("deleted listing"))
