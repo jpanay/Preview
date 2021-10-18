@@ -13,7 +13,8 @@ class FilterListings extends React.Component {
   }
 
   handleCheckboxChange(e) {
-    const value = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
+    const value =
+      e.target.type === "checkbox" ? e.target.checked : e.target.value;
     this.setState({ [e.target.name]: value });
   }
 

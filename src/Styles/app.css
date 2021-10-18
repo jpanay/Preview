@@ -12,16 +12,3 @@ body {
   padding: 0px 48px;
 }
 
-.heading {
-  font-size: 1.3rem;
-  margin-top: 8px;
-  padding: 4px 8px 0px 8px;
-  background-color: rgb(230, 240, 250);
-  border: 1px solid rgb(180, 180, 180);
-  border-radius: 4px 4px 0px 0px;
-}
-
-.big-checkbox {
-  height: 30px;
-  cursor: pointer;
-}
