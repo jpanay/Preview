@@ -13,10 +13,12 @@ let InfoModal = ({ selectedListing, editListing }) => {
   let [previewed, setPreviewed] = useState(selectedListing.previewed);
   let [listed, setListed] = useState(selectedListing.listed);
   let [isEditing, setIsEditing] = useState(false);
+
   let closeModal = () => {
     setIsEditing(false);
     document.getElementById("info-modal-wrapper").style.display = "none";
   };
+
   let sendEditedListing = () => {
     editListing(selectedListing._id, {
       address,
@@ -86,6 +88,29 @@ let InfoModal = ({ selectedListing, editListing }) => {
                   : selectedListing.description
               }
             ></input>
+            <div>
+              <label htmlFor="modal-occupied">Occupied</label>
+              <input
+                type="checkbox"
+                name="modal-occupied"
+                defaultChecked={selectedListing.occupied}
+                onChange={() => setOccupied(!occupied)}
+              />
+              <label htmlFor="modal-previewed">Previewed</label>
+              <input
+                type="checkbox"
+                name="modal-previewed"
+                defaultChecked={selectedListing.previewed}
+                onChange={() => setPreviewed(!previewed)}
+              />
+              <label htmlFor="modal-listed">Listed</label>
+              <input
+                type="checkbox"
+                name="modal-listed"
+                defaultChecked={selectedListing.previewed}
+                onChange={() => setListed(!listed)}
+              />
+            </div>
           </>
         )}
         {isEditing ? (
@@ -96,6 +121,7 @@ let InfoModal = ({ selectedListing, editListing }) => {
         ) : (
           <button onClick={() => setIsEditing(true)}>Edit</button>
         )}
+        <button onClick={() => setIsEditing(true)}>Delete</button>
       </div>
     </div>
   );

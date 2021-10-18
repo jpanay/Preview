@@ -13,7 +13,6 @@ class App extends React.Component {
       listings: [],
       selectedListing: {},
     };
-
     this.selectListing = this.selectListing.bind(this);
     this.editListing = this.editListing.bind(this);
     this.getListings = this.getListings.bind(this);
