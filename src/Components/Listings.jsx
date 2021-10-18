@@ -1,9 +1,9 @@
 import React from "react";
-import Listing from "./Listing";
-import AddListing from "./AddListing";
+import ListingContainer from "../containers/ListingContainer";
+import AddListingContainer from "../containers/AddListingContainer";
 import FilterListings from "./FilterListings";
 
-let Listings = ({ listings, selectListing, handleGeocoding }) => {
+let Listings = ({ listings }) => {
   return (
     <div id="listings-wrapper">
       <div className="display-6 mt-2 main-heading">PREVIEW</div>
@@ -12,7 +12,7 @@ let Listings = ({ listings, selectListing, handleGeocoding }) => {
       <FilterListings />
 
       <div className="sub-heading">Add Listing</div>
-      <AddListing handleGeocoding={handleGeocoding}/>
+      <AddListingContainer />
 
       <div className="sub-heading">All Listings</div>
       <div id="listings" className="container listings">
@@ -27,16 +27,13 @@ let Listings = ({ listings, selectListing, handleGeocoding }) => {
           <div className="col-1 listedn">List.</div>
         </div>
 
-        {listings.map(function (listing, i) {
-          return (
-            <Listing
-              selectListing={selectListing}
-              obj={listing}
-              key={i}
-              listing={listing}
-            />
-          );
-        })}
+        {listings ? (
+          listings.map(function (listing, i) {
+            return <ListingContainer key={i} listing={listing} />;
+          })
+        ) : (
+          <> </>
+        )}
       </div>
     </div>
   );
