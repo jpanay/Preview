@@ -20,7 +20,7 @@ class FilterListings extends React.Component {
 
   render() {
     return (
-      <div>
+      <div id="filter-listings">
         <div className="form-check form-check-inline">
           <input className="form-check-input" type="checkbox" name="filter-occupied" id="filter-occupied" checked={this.state.filterOccupied} onChange={this.handleCheckboxChange} />
           <label className="form-check-label" htmlFor="filter-occupied">Occupied</label>

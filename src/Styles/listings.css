@@ -30,3 +30,11 @@
   border-left: 1px solid rgb(100, 100, 100);
 }
 
+#add-listing {
+  background-color: rgba(240, 248, 255, 0.466);
+}
+
+#filter-listings {
+  background-color: rgba(240, 248, 255, 0.384);
+}
+

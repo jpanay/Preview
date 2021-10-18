@@ -73,7 +73,7 @@ class AddListing extends React.Component {
     return (
       <form onSubmit={this.handleSubmit} id="add-listing" className="container">
 
-        <div className="row align-items-start mt-2">
+        <div className="row align-items-start pt-2">
           <label htmlFor="address" className="col-4">Address</label>
           <label htmlFor="unit" className="col-1">Unit</label>
           <label htmlFor="price" className="col-2">Price</label>

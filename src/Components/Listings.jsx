@@ -6,15 +6,15 @@ import FilterListings from "./FilterListings";
 let Listings = ({ listings, selectListing }) => {
   return (
     <div id="listings-wrapper">
-      <div className="display-6 mt-2">PREVIEW</div>
+      <div className="display-6 mt-2 main-heading">PREVIEW</div>
 
-      <div className="heading">Filter</div>
+      <div className="sub-heading">Filter</div>
       <FilterListings />
 
-      <div className="heading">Add Listing</div>
+      <div className="sub-heading">Add Listing</div>
       <AddListing />
 
-      <div className="heading">All Listings</div>
+      <div className="sub-heading">All Listings</div>
       <div id="listings" className="container listings">
         <div className="row align-items-start listing-header">
           <div className="col-4 address">Address</div>
