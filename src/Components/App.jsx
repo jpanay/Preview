@@ -65,6 +65,7 @@ class App extends React.Component {
             listings={this.state.listings}
           />
           <InfoModal
+            getListings={this.getListings}
             editListing={this.editListing}
             selectedListing={this.state.selectedListing}
           />

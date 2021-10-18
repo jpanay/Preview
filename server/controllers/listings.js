@@ -3,7 +3,7 @@ var listing = models.listing;
 
 module.exports = {
   getAll: (req, res) => {
-    listing
+    return listing
       .getAll()
       .then((data) => {
         res.send(data);
@@ -14,7 +14,7 @@ module.exports = {
       });
   },
   deleteListing: (req, res) => {
-    listing
+    return listing
       .deleteListing(req.body.listingID)
       .then(() => res.send("deleted listing"))
       .catch((err) => {
