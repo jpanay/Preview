@@ -10,8 +10,9 @@
 }
 
 .listing-header div {
-  border-bottom: 1px solid rgb(100, 100, 100);
+  border-bottom: 3px solid rgb(100, 100, 100);
   border-left: 1px solid rgb(100, 100, 100);
+  font-weight: 500;
 }
 
 .listing {

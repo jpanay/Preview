@@ -8,7 +8,7 @@ const AnyReactComponent = ({ text }) => <div>{text}</div>;
 let GoogleMap = (props) => {
   let [lat, setLat] = useState(40.73763599999999);
   let [lng, setLng] = useState(-73.9929658);
-  let [zoom, setZoom] = useState(16);
+  let [zoom, setZoom] = useState(14);
   let createMapOptions = {
     mapTypeId: "hybrid",
     tilt: 25,
