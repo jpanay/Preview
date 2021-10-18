@@ -16,9 +16,15 @@ class App extends React.Component {
     this.selectListing = this.selectListing.bind(this);
     this.editListing = this.editListing.bind(this);
     this.getListings = this.getListings.bind(this);
+    this.handleGeocoding = this.handleGeocoding.bind(this)
   }
-  // makes a patch request to edit the listing in the database. Then retrieves the new edited listings.
 
+  componentDidMount() {
+    console.log("Mounting");
+    this.getListings();
+  }
+
+  // makes a patch request to edit the listing in the database. Then retrieves the new edited listings.
   editListing(listingID, editedListing) {
     axios
       .patch("/listings", {
@@ -48,9 +54,25 @@ class App extends React.Component {
       })
       .catch((err) => console.log(err));
   }
-  componentDidMount() {
-    console.log("Mounting");
-    this.getListings();
+
+  handleGeocoding(address) {
+    const regexAddress = address.replace(/\s+/g, '+')
+    return axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${regexAddress},+${this.state.area},+NY&key=${process.env.GOOGLE_API_KEY}`)
+      .then(({ data }) => {
+        console.log('Geocoding Data')
+        const result = data.results[0]
+        console.log(result)
+        const position = result.geometry.location
+        const full_address = result.formatted_address
+        const zipcode = result.address_components[7].short_name
+        const newData = { 
+          position: position,
+          full_address: full_address,
+          zipcode: zipcode
+        }
+        return newData
+      })
+      .catch((err) => { return err })
   }
 
   render() {
@@ -62,6 +84,7 @@ class App extends React.Component {
           <Listings
             selectListing={this.selectListing}
             listings={this.state.listings}
+            handleGeocoding={this.handleGeocoding}
           />
           <InfoModal
             getListings={this.getListings}

@@ -131,27 +131,29 @@ let InfoModal = ({ selectedListing, editListing, getListings }) => {
             </div>
           </>
         )}
-        {isEditing ? (
-          <div>
-            <button onClick={sendEditedListing}>Submit</button>
-            <button onClick={() => setIsEditing(false)}>Cancel</button>
-          </div>
-        ) : (
-          <button onClick={() => setIsEditing(true)}>Edit</button>
-        )}
-        {confirmDelete === false ? (
-          <button name="Delete" onClick={() => setConfirmDelete(true)}>
-            Delete
-          </button>
-        ) : (
-          <>
-            <div>Are you sure you want to delete this listing?</div>
+        <div className="row">
+          {isEditing ? (
             <div>
-              <button onClick={deleteListing}>Confirm</button>
-              <button onClick={() => setConfirmDelete(false)}>Cancel</button>
+              <button onClick={() => sendEditedListing()}>Submit</button>
+              <button onClick={() => setIsEditing(false)}>Cancel</button>
             </div>
-          </>
-        )}
+          ) : (
+            <button onClick={() => setIsEditing(true)}>Edit</button>
+          )}
+          {confirmDelete === false ? (
+            <button name="Delete" onClick={() => setConfirmDelete(true)}>
+              Delete
+            </button>
+          ) : (
+            <>
+              <div>Are you sure you want to delete this listing?</div>
+              <div>
+                <button onClick={deleteListing}>Confirm</button>
+                <button onClick={() => setConfirmDelete(false)}>Cancel</button>
+              </div>
+            </>
+          )}
+        </div>
       </div>
     </div>
   );
