@@ -3,7 +3,7 @@ import Listing from "./Listing";
 import AddListing from "./AddListing";
 import FilterListings from "./FilterListings";
 
-let Listings = ({ listings, selectListing }) => {
+let Listings = ({ listings, selectListing, handleGeocoding }) => {
   return (
     <div id="listings-wrapper">
       <div className="display-6 mt-2 main-heading">PREVIEW</div>
@@ -12,7 +12,7 @@ let Listings = ({ listings, selectListing }) => {
       <FilterListings />
 
       <div className="sub-heading">Add Listing</div>
-      <AddListing />
+      <AddListing handleGeocoding={handleGeocoding}/>
 
       <div className="sub-heading">All Listings</div>
       <div id="listings" className="container listings">

@@ -44,9 +44,7 @@ let InfoModal = ({ selectedListing, editListing, getListings }) => {
   return (
     <div id="info-modal-wrapper">
       <div className="modal-content">
-        <span onClick={() => closeModal()} className="close">
-          &times;
-        </span>
+        <span onClick={() => closeModal()} className="close">&times;</span>
         {!isEditing ? (
           <>
             <div>{selectedListing.address}</div>
@@ -120,17 +118,17 @@ let InfoModal = ({ selectedListing, editListing, getListings }) => {
             </div>
           </>
         )}
-        {isEditing ? (
-          <div>
-            <button onClick={() => sendEditedListing()}>Submit</button>
-            <button onClick={() => setIsEditing(false)}>Cancel</button>
-          </div>
-        ) : (
-          <button onClick={() => setIsEditing(true)}>Edit</button>
-        )}
-        <button name="Delete" onClick={deleteListing}>
-          Delete
-        </button>
+        <div className="row">
+          {isEditing ? (
+            <div>
+              <button onClick={() => sendEditedListing()}>Submit</button>
+              <button onClick={() => setIsEditing(false)}>Cancel</button>
+            </div>
+            ) : (
+              <button onClick={() => setIsEditing(true)}>Edit</button>
+            )}
+          <button name="Delete" onClick={deleteListing}>Delete</button>
+        </div>
       </div>
     </div>
   );

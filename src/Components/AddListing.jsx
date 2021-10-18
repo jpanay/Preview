@@ -35,29 +35,11 @@ class AddListing extends React.Component {
     this.setState({ [e.target.name]: value });
   }
 
-  handleGeocoding() {
-    const regexAddress = this.state.address.replace(/\s+/g, '+')
-    return axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${regexAddress},+${this.state.area},+NY&key=${process.env.GOOGLE_API_KEY}`)
-      .then(({ data }) => {
-        console.log('Geocoding Data')
-        const result = data.results[0]
-        console.log(result)
-        const position = result.geometry.location
-        const full_address = result.formatted_address
-        const zipcode = result.address_components[7].short_name
-        this.setState({ 
-          position: position,
-          full_address: full_address,
-          zipcode: zipcode
-        });
-      })
-      .catch((err) => { return err })
-  }
-
   handleSubmit(e) {
     e.preventDefault();
-    this.handleGeocoding()
-      .then(() => {
+    this.props.handleGeocoding(this.state.address)
+      .then((newData) => {
+        this.setState(newData);
         axios
           .post("/listings", { newListing: this.state })
           .then(({ data }) => {
