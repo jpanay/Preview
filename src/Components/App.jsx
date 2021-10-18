@@ -59,8 +59,8 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <Navigation />
-        <div id="main">
+        {/* <Navigation /> */}
+        <div id="main" className="container">
           <Listings
             selectListing={this.selectListing}
             listings={this.state.listings}
@@ -69,6 +69,7 @@ class App extends React.Component {
             editListing={this.editListing}
             selectedListing={this.state.selectedListing}
           />
+          {/* <InfoTab selectedListing={this.state.selectedListing} /> */}
           <GoogleMap listings={this.state.listings} />
         </div>
       </>

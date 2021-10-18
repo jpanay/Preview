@@ -13,7 +13,10 @@ let InfoModal = ({ selectedListing, editListing }) => {
   let [previewed, setPreviewed] = useState(selectedListing.previewed);
   let [listed, setListed] = useState(selectedListing.listed);
   let [isEditing, setIsEditing] = useState(false);
-
+  let closeModal = () => {
+    setIsEditing(false);
+    document.getElementById("info-modal-wrapper").style.display = "none";
+  };
   let sendEditedListing = () => {
     editListing(selectedListing._id, {
       address,
@@ -26,13 +29,15 @@ let InfoModal = ({ selectedListing, editListing }) => {
       previewed,
       listed,
     });
-    setIsEditing(false);
+    closeModal();
   };
 
   return (
     <div id="info-modal-wrapper">
       <div className="modal-content">
-        <span className="close">&times;</span>
+        <span onClick={() => closeModal()} className="close">
+          &times;
+        </span>
         {!isEditing ? (
           <>
             <div>{selectedListing.address}</div>
@@ -41,9 +46,9 @@ let InfoModal = ({ selectedListing, editListing }) => {
             <div>{selectedListing.beds}</div>
             <div>{selectedListing.baths}</div>
             <div>{selectedListing.description}</div>
-            {/* <div>{selectedListing.occupied.toString().toLowerCase()}</div>
-            <div>{selectedListing.previewed.toString().toLowerCase()}</div>
-            <div>{selectedListing.listed.toString().toLowerCase()}</div> */}
+            <div>{selectedListing.occupied}</div>
+            <div>{selectedListing.previewed}</div>
+            <div>{selectedListing.listed}</div>
           </>
         ) : (
           <>
@@ -75,7 +80,11 @@ let InfoModal = ({ selectedListing, editListing }) => {
             <div>{selectedListing.description}</div>
             <input
               onChange={() => setDescription(event.target.value)}
-              placeholder={selectedListing.description}
+              placeholder={
+                selectedListing.description.length === 0
+                  ? "description"
+                  : selectedListing.description
+              }
             ></input>
           </>
         )}

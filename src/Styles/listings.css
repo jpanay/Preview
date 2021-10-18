@@ -1,22 +1,29 @@
-.listings {
-  display: flex;
-  flex-flow: column nowrap;
-  height: 100%;
-  text-align: center;
+#listings-wrapper {
+  width: 100%;
+  max-height: 100%;
 }
 
-.location {
-  width: 50%;
+#listings {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid grey;
 }
-.unit {
-  width: 10%;
+
+.listing-header div {
+  border-bottom: 1px solid rgb(100, 100, 100);
+  border-left: 1px solid rgb(100, 100, 100);
 }
-.price {
-  width: 20%;
+
+.listing {
+  color: rgb(100, 100, 100);
+  border-bottom: 1px solid rgb(100, 100, 100);
 }
-.beds {
-  width: 10%;
+
+.listing:hover   {
+  cursor: pointer;
+  color: rgb(69, 102, 211);
 }
-.baths {
-  width: 10%;
+
+.listing-field {
+  padding: 0px 2px;
+  border-left: 1px solid rgb(100, 100, 100);
 }
