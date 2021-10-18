@@ -13,3 +13,13 @@ body {
 
 #nav {
 }
+
+.heading {
+  font-size: 1.3rem;
+  margin-top: 8px;
+  margin-bottom: 2px;
+  padding: 4px 8px 0px 8px;
+  background-color: rgba(176, 217, 255, 0.644);
+  border: 1px solid rgb(100,100,100);
+  border-radius: 4px 4px 0px 0px;
+}

@@ -4,9 +4,9 @@ class FilterListings extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      occupied: false,
-      previewed: false,
-      listed: false,
+      filterOccupied: false,
+      filterPreviewed: false,
+      filterListed: false,
     };
 
     this.handleCheckboxChange = this.handleCheckboxChange.bind(this);
@@ -20,12 +20,18 @@ class FilterListings extends React.Component {
   render() {
     return (
       <div>
-        <label htmlFor="occupied">Occupied</label>
-        <input type="checkbox" name="occupied" id="occupied" checked={this.state.occupied} onChange={this.handleCheckboxChange} />
-        <label htmlFor="previewed">Previewed</label>
-        <input type="checkbox" name="previewed" id="previewed" checked={this.state.previewed} onChange={this.handleCheckboxChange} />
-        <label htmlFor="listed">Listed</label>
-        <input type="checkbox" name="listed" id="listed" checked={this.state.listed} onChange={this.handleCheckboxChange} />
+        <div className="form-check form-check-inline">
+          <input className="form-check-input" type="checkbox" name="filter-occupied" id="filter-occupied" checked={this.state.filterOccupied} onChange={this.handleCheckboxChange} />
+          <label className="form-check-label" htmlFor="filter-occupied">Occupied</label>
+        </div>
+        <div className="form-check form-check-inline">
+          <input className="form-check-input" type="checkbox" name="filter-previewed" id="filter-previewed" checked={this.state.filterPreviewed} onChange={this.handleCheckboxChange} />
+          <label className="form-check-label" htmlFor="filter-previewed">Previewed</label>
+        </div>
+        <div className="form-check form-check-inline">
+          <input className="form-check-input" type="checkbox" name="filter-listed" id="filter-listed" checked={this.state.filterListed} onChange={this.handleCheckboxChange} />
+          <label className="form-check-label" htmlFor="filter-listed">Listed</label>
+        </div>
       </div>
     );
   }

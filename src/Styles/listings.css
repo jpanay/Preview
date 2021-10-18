@@ -1,6 +1,7 @@
 #listings-wrapper {
   width: 100%;
   max-height: 100%;
+  margin-right: 12px;
 }
 
 #listings {
@@ -27,3 +28,4 @@
   padding: 0px 2px;
   border-left: 1px solid rgb(100, 100, 100);
 }
+
