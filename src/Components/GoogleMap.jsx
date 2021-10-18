@@ -10,7 +10,7 @@ let GoogleMap = (props) => {
   let [lng, setLng] = useState(-73.95);
   let [zoom, setZoom] = useState(12);
   return (
-    <div style={{ height: "100vh", width: "100%" }} id="map-wrapper">
+    <div id="map-wrapper">
       <GoogleMapReact
         id="map"
         bootstrapURLKeys={{ key: GOOGLE_API_KEY }}

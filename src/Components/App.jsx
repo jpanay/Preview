@@ -38,13 +38,14 @@ class App extends React.Component {
     return (
       <>
         {/* <Navigation /> */}
-        <div id="main" className="container">
+        <div id="main">
+        <GoogleMap listings={this.state.listings} />
           <Listings
             selectListing={this.selectListing}
             listings={this.state.listings}
           />
           {/* <InfoTab selectedListing={this.state.selectedListing} /> */}
-          <GoogleMap listings={this.state.listings} />
+          
         </div>
       </>
     );

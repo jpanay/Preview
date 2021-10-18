@@ -73,38 +73,35 @@ class AddListing extends React.Component {
     return (
       <form onSubmit={this.handleSubmit} id="add-listing" className="container">
 
-        <div className="row mt-2">
-          <label for="address" className="col-4">Address</label>
-          <label for="unit" className="col-1">Unit</label>
-          <label for="price" className="col-2">Price</label>
-          <label for="beds" className="col-1">Beds</label>
-          <label for="baths" className="col-1">Baths</label>
-          <label for="occupied" className="col-1">Occ.</label>
-          <label for="previewed" className="col-1">Prev.</label>
-          <label for="listed" className="col-1">List.</label>
+        <div className="row align-items-start mt-2">
+          <label htmlFor="address" className="col-4">Address</label>
+          <label htmlFor="unit" className="col-1">Unit</label>
+          <label htmlFor="price" className="col-2">Price</label>
+          <label htmlFor="beds" className="col-1">Beds</label>
+          <label htmlFor="baths" className="col-1">Baths</label>
+          <label htmlFor="occupied" className="col-1">Occ.</label>
+          <label htmlFor="previewed" className="col-1">Prev.</label>
+          <label htmlFor="listed" className="col-1">List.</label>
         </div>
-        <div className="row">
+        <div className="row align-items-start">
           <input className="col-4 form-control-sm" type="text" name="address" placeholder="address" value={this.state.address} onChange={this.handleChange}  />
           <input className="col-1 form-control-sm" type="text" name="unit" placeholder="unit" value={this.state.unit} onChange={this.handleChange}  />
           <input className="col-2 form-control-sm" type="number" name="price" placeholder="price" value={this.state.price} onChange={this.handleChange}  />
           <input className="col-1 form-control-sm" type="number" name="beds" placeholder="beds" value={this.state.beds} onChange={this.handleChange}  />
           <input className="col-1 form-control-sm" type="number" name="baths" placeholder="baths" value={this.state.baths} onChange={this.handleChange}  />
 
-          <input className="btn-check" type="checkbox" name="occupied" id="occupied" checked={this.state.occupied} onChange={this.handleCheckboxChange} />
-          <label className="col-1 btn btn-outline-success" htmlFor="occupied">occ.</label>
-          <input className="btn-check" type="checkbox" name="previewed" id="previewed" checked={this.state.previewed} onChange={this.handleCheckboxChange} />
-          <label className="col-1 btn btn-outline-success" htmlFor="previewed">prev.</label>
-          <input className="btn-check" type="checkbox" name="listed" id="listed" checked={this.state.listed} onChange={this.handleCheckboxChange} />
-          <label className="col-1 btn btn-outline-success" htmlFor="listed">list.</label>
+          <input className="col-1 big-checkbox" type="checkbox" name="occupied" id="occupied" checked={this.state.occupied} onChange={this.handleCheckboxChange} />
+          <input className="col-1 big-checkbox" type="checkbox" name="previewed" id="previewed" checked={this.state.previewed} onChange={this.handleCheckboxChange} />
+          <input className="col-1 big-checkbox" type="checkbox" name="listed" id="listed" checked={this.state.listed} onChange={this.handleCheckboxChange} />
         </div>
 
         <div className="row mt-2"></div>
-        <div className="row">
-          <select className="col form-select" name="manager" id="manager" value={this.state.manager} onChange={this.handleChange}>
+        <div className="row align-items-start">
+          <select className="col form-select mr-2" name="manager" id="manager" value={this.state.manager} onChange={this.handleChange}>
             <option value="XYZ Properties">XYZ Properties</option>
             <option value="Merchant Group">Merchant Group</option>
           </select>
-          <select className="col form-select" name="area" id="area" value={this.state.areas} onChange={this.handleChange}>
+          <select className="col form-select mr-2" name="area" id="area" value={this.state.areas} onChange={this.handleChange}>
             <option value="Manhattan">Manhattan</option>
             <option value="Brooklyn">Brooklyn</option>
             <option value="Queens">Queens</option>
