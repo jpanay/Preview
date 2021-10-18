@@ -21,7 +21,8 @@
 
 .listing:hover   {
   cursor: pointer;
-  color: rgb(69, 102, 211);
+  color: rgb(120, 172, 224);
+  font-weight: bold;
 }
 
 .listing-field {
