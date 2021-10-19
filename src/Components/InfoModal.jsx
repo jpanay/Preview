@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 // InfoModal should have the ability to edit the current selected unit
 // needs an edit function passed in, needs a function passed in: functions need to interact with Mongo based on the id
-let InfoModal = ({ selectedListing, editListing, getListings }) => {
+let InfoModal = ({ selectedListing, getListings }) => {
   let [address, setAddress] = useState(selectedListing.address);
   let [unit, setUnit] = useState(selectedListing.unit);
   let [price, setPrice] = useState(selectedListing.price);
@@ -20,11 +20,25 @@ let InfoModal = ({ selectedListing, editListing, getListings }) => {
     document.getElementById("info-modal-wrapper").style.display = "none";
   };
 
+  let editListing = (listingID, editedListing) => {
+    axios
+      .patch("/listings", {
+        listingID: listingID,
+        updatedValues: editedListing,
+      })
+      .then(() => getListings())
+      .catch((err) => {
+        console.log("could not edit listings");
+        console.log(err);
+      });
+  };
+
   let deleteListing = () => {
     axios
       .delete("/listings", { data: { listingID: selectedListing._id } })
       .then(() => getListings())
       .catch((err) => console.log(err));
+    setConfirmDelete(false);
     closeModal();
   };
 

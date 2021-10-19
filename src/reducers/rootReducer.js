@@ -1,5 +1,9 @@
 import { combineReducers } from "redux";
-
-const rootReducer = combineReducers({});
+import selectListingReducer from "./selectListingReducer";
+import getListingsReducer from "./getListingsReducer";
+const rootReducer = combineReducers({
+  selectedListing: selectListingReducer,
+  listings: getListingsReducer,
+});
 
 export default rootReducer;

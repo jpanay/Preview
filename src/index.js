@@ -7,6 +7,13 @@ import "./Styles/map.css";
 import "./Styles/infoModal.css";
 import "./Styles/marker.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import { Provider } from "react-redux";
+import store from "./store";
+import AppContainer from "./containers/AppContainer";
 var mountNode = document.getElementById("app");
-ReactDOM.render(<App />, mountNode);
+ReactDOM.render(
+  <Provider store={store}>
+    <AppContainer />
+  </Provider>,
+  mountNode
+);
