@@ -5,6 +5,7 @@ import thunk from "redux-thunk";
 // add in any state you need here
 let initialState = {
   listings: [],
+  filteredListings: [],
   selectedListing: {},
 };
 
