@@ -6,7 +6,7 @@ import GoogleMapContainer from "../containers/GoogleMapContainer";
 
 const App = ({ getListings }) => {
   useEffect(() => {
-    getListings();
+    getListings("XYZ Properties");
   }, []);
 
   return (

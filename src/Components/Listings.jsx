@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import ListingContainer from "../containers/ListingContainer";
 import AddListingContainer from "../containers/AddListingContainer";
 import FilterListingsContainer from "../containers/FilterListingsContainer";
-
-let Listings = ({ listings, filteredListings }) => {
+import HandleManagers from "./HandleManagers";
+let Listings = ({ listings, filteredListings, manager, handlingManagers }) => {
   return (
     <div id="listings-wrapper">
       <div className="display-6 mt-2 main-heading">PREVIEW</div>
@@ -11,10 +11,20 @@ let Listings = ({ listings, filteredListings }) => {
       <div className="sub-heading">Filter</div>
       <FilterListingsContainer />
 
-      <div className="sub-heading">Add Listing</div>
-      <AddListingContainer />
-
-      <div className="sub-heading">All Listings</div>
+      {!handlingManagers ? (
+        <>
+          <div className="sub-heading">Manage Managers</div>
+          <Manager />
+        </>
+      ) : (
+        <>
+          <div className="sub-heading">Add Listing</div>
+          <AddListingContainer />
+        </>
+      )}
+      <div className="sub-heading">
+        All Listings: {manager || "XYZ Properties"}
+      </div>
       <div id="listings" className="container listings">
         <div className="row align-items-start listing-header">
           <div className="col-4 address">Address</div>

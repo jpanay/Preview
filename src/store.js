@@ -7,6 +7,9 @@ let initialState = {
   listings: [],
   filteredListings: [],
   selectedListing: {},
+  manager: "XYZ Properties",
+  managerList: [],
+  handlingManagers: false,
 };
 
 const store = createStore(rootReducer, initialState, applyMiddleware(thunk));

@@ -4,7 +4,7 @@ var listing = models.listing;
 module.exports = {
   getAll: (req, res) => {
     return listing
-      .getAll()
+      .getAll(req.query.manager)
       .then((data) => {
         res.send(data);
       })

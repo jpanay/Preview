@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./Components/App";
 import "./Styles/app.css";
+import "./Styles/managers.css";
 import "./Styles/listings.css";
 import "./Styles/map.css";
 import "./Styles/infoModal.css";

@@ -1,22 +1,27 @@
 import { connect, dispatch } from "react-redux";
 import getListingsThunk from "../actions/getListingsThunk.js";
 import getSelectedListing from "../actions/getSelectedListing";
-import App from "../Components/App";
+import HandleManagers from "../Components/HandleManagers";
 
 var mapStoreToProps = (state) => ({
-  listings: state.listings,
-  selectedListing: state.selectedListing,
+  manager: state.manager,
+  managerList: state.managerList,
+  handlingManagers: state.handlingManagers,
 });
 
 var mapDispatchToProps = (dispatch) => ({
-  selectListing: (id) => {
+  addManager: (id) => {
     dispatch(getSelectedListing(id));
   },
+
   getListings: (manager) => {
     dispatch(getListingsThunk(manager));
   },
 });
 
-var AppContainer = connect(mapStoreToProps, mapDispatchToProps)(App);
+var HandleManagersContainer = connect(
+  mapStoreToProps,
+  mapDispatchToProps
+)(HandleManagers);
 
-export default AppContainer;
+export default HandleManagersContainer;

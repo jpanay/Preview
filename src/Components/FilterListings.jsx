@@ -14,7 +14,6 @@ class FilterListings extends React.Component {
   }
 
   handleFilterListings(e) {
-    console.log(e.target.name);
     if (
       this.state.listed === false &&
       this.state.previewed === false &&
@@ -24,6 +23,7 @@ class FilterListings extends React.Component {
       this.props.filterListings([]);
     } else {
       //create a filtered listing that matches the exact values
+      // if there are two things we need to filter differently
       if (
         (this.state.occupied && this.state.previewed) ||
         (this.state.occupied && this.state.listed) ||
@@ -42,38 +42,44 @@ class FilterListings extends React.Component {
           this.props.filterListings([
             {
               address: "no matching filters",
-              area: "n/a",
-              baths: 0,
-              beds: 0,
-              description: "n/a",
-              full_address: "n/a",
-              listed: false,
-              manager: "n/a",
-              occupied: false,
-              position: { lat: 40.7385431, lng: -73.9819469 },
-              previewed: false,
-              price: 0,
-              unit: "n/a",
-              zipcode: "n/a",
             },
           ]);
         } else {
           this.props.filterListings(filteredList);
         }
       } else {
-        let filteredList = this.props.listings.filter((listing) => {
-          console.log(listing[e.target.name]);
-          if (listing[e.target.name] === this.state[e.target.name]) {
-            return listing;
-          }
-        });
-        this.props.filterListings(filteredList);
+        // account for when u click a different option
+        // handles if we clicked a filter to true
+        if (this.state[e.target.name]) {
+          let filteredList = this.props.listings.filter((listing) => {
+            if (listing[e.target.name] === this.state[e.target.name]) {
+              return listing;
+            }
+          });
+          this.props.filterListings(filteredList);
+        } else if (
+          this.state.occupied ||
+          this.state.listed ||
+          this.state.previewed
+        ) {
+          Object.keys(this.state).map((filter) => {
+            if (this.state[filter]) {
+              console.log(filter);
+              console.log(this.state[filter]);
+              let filteredList = this.props.listings.filter((listing) => {
+                if (listing[filter] === this.state[filter]) {
+                  return listing;
+                }
+              });
+              this.props.filterListings(filteredList);
+            }
+          });
+        }
       }
     }
   }
 
   handleCheckboxChange(e) {
-    console.log(!this.state[event.target.name]);
     this.setState({ [e.target.name]: !this.state[event.target.name] }, () =>
       this.handleFilterListings(e)
     );
