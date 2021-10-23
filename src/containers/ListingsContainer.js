@@ -3,6 +3,7 @@ import Listings from "../Components/Listings";
 
 var mapStoreToProps = (state) => ({
   listings: state.listings,
+  filteredListings: state.filteredListings,
 });
 
 var ListingsContainer = connect(mapStoreToProps, null)(Listings);

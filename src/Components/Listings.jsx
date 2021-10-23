@@ -1,15 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ListingContainer from "../containers/ListingContainer";
 import AddListingContainer from "../containers/AddListingContainer";
-import FilterListings from "./FilterListings";
+import FilterListingsContainer from "../containers/FilterListingsContainer";
 
-let Listings = ({ listings }) => {
+let Listings = ({ listings, filteredListings }) => {
   return (
     <div id="listings-wrapper">
       <div className="display-6 mt-2 main-heading">PREVIEW</div>
 
       <div className="sub-heading">Filter</div>
-      <FilterListings />
+      <FilterListingsContainer />
 
       <div className="sub-heading">Add Listing</div>
       <AddListingContainer />
@@ -27,13 +27,13 @@ let Listings = ({ listings }) => {
           <div className="col-1 listedn">List.</div>
         </div>
 
-        {listings ? (
-          listings.map(function (listing, i) {
-            return <ListingContainer key={i} listing={listing} />;
-          })
-        ) : (
-          <> </>
-        )}
+        {filteredListings.length > 0
+          ? filteredListings.map(function (listing, i) {
+              return <ListingContainer key={i} listing={listing} />;
+            })
+          : listings.map(function (listing, i) {
+              return <ListingContainer key={i} listing={listing} />;
+            })}
       </div>
     </div>
   );
