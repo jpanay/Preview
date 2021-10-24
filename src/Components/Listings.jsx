@@ -14,7 +14,7 @@ let Listings = ({ listings, filteredListings, manager, handlingManagers }) => {
       {!handlingManagers ? (
         <>
           <div className="sub-heading">Manage Managers</div>
-          <Manager />
+          <HandleManagers />
         </>
       ) : (
         <>
