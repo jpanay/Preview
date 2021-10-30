@@ -8,41 +8,39 @@ import ListingsContainer from "../containers/Listings/ListingsContainer";
 import InfoModalContainer from "../containers/Modal/InfoModalContainer";
 import GoogleMapContainer from "../containers/Map/GoogleMapContainer";
 
-const App = ({ getListings }) => {
+const App = ({ getListings, currentPage, changePage }) => {
   useEffect(() => {
     getListings("XYZ Properties");
   }, []);
 
-  let page = 'home'
-
-  if (page === 'home') {
+  if (currentPage === "home") {
     return (
       <>
-        <Navigation />
+        <Navigation changePage={changePage} />
         <Home />
       </>
-    )
+    );
   }
-  if (page === 'listings') {
+  if (currentPage === "listings") {
     return (
       <>
-        <Navigation />
+        <Navigation changePage={changePage} />
         <Listings />
       </>
-    )
+    );
   }
-  if (page === 'tools') {
+  if (currentPage === "tools") {
     return (
       <>
-        <Navigation />
+        <Navigation changePage={changePage} />
         <Tools />
       </>
-    )
+    );
   }
 
   return (
     <>
-      <Navigation />
+      <Navigation changePage={changePage} />
       <div id="main">
         <GoogleMapContainer />
         <ListingsContainer />

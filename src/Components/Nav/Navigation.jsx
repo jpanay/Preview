@@ -1,10 +1,10 @@
 import React from "react";
 
-let Navigation = () => (
+let Navigation = ({ changePage }) => (
   <header id="nav">
-    <p>Listings</p>
-    <p>Agents</p>
-    <p>Locations</p>
+    <p onClick={() => changePage("listings")}>Listings</p>
+    <p onClick={() => changePage("home")}>Agents</p>
+    <p onClick={() => changePage("tools")}>Locations</p>
   </header>
 );
 
