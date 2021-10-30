@@ -3,7 +3,7 @@ import store from "../store";
 var getListingsReducer = (state = {}, action) => {
   if (action.type === "GET_LISTINGS") {
     return action.payload;
-  } else if (action.type === "GET_LISTINGS") {
+  } else if (action.type === "ADD_LISTING") {
     return [...state.listings, action.payload];
   } else return state;
 };

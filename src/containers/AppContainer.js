@@ -1,6 +1,6 @@
 import { connect, dispatch } from "react-redux";
-import getListingsThunk from "../actions/getListingsThunk.js";
-import getSelectedListing from "../actions/getSelectedListing";
+import getListingsThunk from "../actions/Listings/getListingsThunk.js";
+import getSelectedListing from "../actions/Listings/getSelectedListing";
 import App from "../Components/App";
 
 var mapStoreToProps = (state) => ({
@@ -12,8 +12,8 @@ var mapDispatchToProps = (dispatch) => ({
   selectListing: (id) => {
     dispatch(getSelectedListing(id));
   },
-  getListings: () => {
-    dispatch(getListingsThunk());
+  getListings: (manager) => {
+    dispatch(getListingsThunk(manager));
   },
 });
 

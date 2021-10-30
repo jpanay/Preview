@@ -1,6 +1,6 @@
 import { connect, dispatch } from "react-redux";
-import getListingsThunk from "../actions/getListingsThunk";
-import InfoModal from "../Components/InfoModal";
+import getListingsThunk from "../../actions/Listings/getListingsThunk";
+import InfoModal from "../../Components/Modal/InfoModal";
 
 var mapStoreToProps = (state) => ({
   listings: state.listings,

@@ -1,4 +1,4 @@
-import store from "../store";
+import store from "../../store";
 
 const getSelectedListing = (selectedListing) => {
   let currentStore = store.getState();
