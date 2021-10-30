@@ -11,7 +11,7 @@ let Listings = ({ listings, filteredListings, manager, handlingManagers }) => {
       <div className="sub-heading">Filter</div>
       <FilterListingsContainer />
 
-      {!handlingManagers ? (
+      {handlingManagers ? (
         <>
           <div className="sub-heading">Manage Managers</div>
           <HandleManagers />
@@ -22,9 +22,7 @@ let Listings = ({ listings, filteredListings, manager, handlingManagers }) => {
           <AddListingContainer />
         </>
       )}
-      <div className="sub-heading">
-        All Listings: {manager || "XYZ Properties"}
-      </div>
+      <div className="sub-heading">All Listings:</div>
       <div id="listings" className="container listings">
         <div className="row align-items-start listing-header">
           <div className="col-4 address">Address</div>
