@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import GoogleMap from "../Components/GoogleMap";
+import GoogleMap from "../../Components/Map/GoogleMap";
 
 var mapStoreToProps = (state) => ({
   listings: state.listings,

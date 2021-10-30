@@ -1,0 +1,14 @@
+#nav {
+  display: flex;
+  flex-direction: row;
+}
+
+#nav > p {
+  margin: 1rem;
+}
+
+#nav > p:hover {
+  cursor: pointer;
+  color: rgb(120, 172, 224);
+  font-weight: bold;
+}

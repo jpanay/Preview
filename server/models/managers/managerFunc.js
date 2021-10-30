@@ -1,18 +1,4 @@
 let Manager = require("./Manager");
-/*
-{
-  name: 'XYZ Properties,
-  properties: [{}, {}]
-}
-*/
-/*
-{
-  name: 'XYZ Properties,
-  properties: ['212312312Adasda12', 'asdacbr23123fw3f3c',
- 'g3h345t34rfwfwef']
-}
-*/
-
 
 module.exports = {
   getAll: () => {

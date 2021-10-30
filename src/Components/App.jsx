@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
-import Navigation from "./Navigation";
-import ListingsContainer from "../containers/ListingsContainer";
-import InfoModalContainer from "../containers/InfoModalContainer";
-import GoogleMapContainer from "../containers/GoogleMapContainer";
+// import Navigation from "./Navigation";
+import ListingsContainer from "../containers/Listings/ListingsContainer";
+import InfoModalContainer from "../containers/Modal/InfoModalContainer";
+import GoogleMapContainer from "../containers/Map/GoogleMapContainer";
 
 const App = ({ getListings }) => {
   useEffect(() => {

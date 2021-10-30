@@ -7,6 +7,7 @@ import "./Styles/listings.css";
 import "./Styles/map.css";
 import "./Styles/infoModal.css";
 import "./Styles/marker.css";
+import "./Styles/nav.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Provider } from "react-redux";
 import store from "./store";

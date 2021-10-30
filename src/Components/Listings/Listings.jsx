@@ -1,8 +1,8 @@
 import React from "react";
-import ListingContainer from "../containers/ListingContainer";
-import AddListingContainer from "../containers/AddListingContainer";
-import FilterListingsContainer from "../containers/FilterListingsContainer";
-import HandleManagers from "./HandleManagers";
+import ListingContainer from "../../containers/Listings/ListingContainer";
+import AddListingContainer from "../../containers/Listings/AddListingContainer";
+import FilterListingsContainer from "../../containers/Listings/FilterListingsContainer";
+import HandleManagers from "../Managers/HandleManagers";
 let Listings = ({ listings, filteredListings, manager, handlingManagers }) => {
   return (
     <div id="listings-wrapper">

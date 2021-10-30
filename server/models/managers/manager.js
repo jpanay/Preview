@@ -3,7 +3,8 @@ const { Schema } = mongoose;
 
 const ManagerSchema = new Schema({
   name: String,
-  properties: Array,
+  contact: String,
+  Location: String,
 });
 
 const Manager = mongoose.model("Manager", ManagerSchema);

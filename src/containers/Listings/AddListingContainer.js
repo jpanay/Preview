@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
-import AddListing from "../Components/AddListing";
-import getListingsThunk from "../actions/getListingsThunk";
-import handleAddListing from "../actions/handleAddListing";
+import AddListing from "../../Components/Listings/AddListing";
+import getListingsThunk from "../../actions/Listings/getListingsThunk";
+import handleAddListing from "../../actions/Listings/handleAddListing";
 
 let mapDispatchToProps = (dispatch) => ({
   addListing: (newListing) => {

@@ -1,7 +1,7 @@
 import { connect, dispatch } from "react-redux";
-import getListingsThunk from "../actions/getListingsThunk.js";
-import getSelectedListing from "../actions/getSelectedListing";
-import HandleManagers from "../Components/HandleManagers";
+import getListingsThunk from "../../actions/Listings/getListingsThunk.js";
+import getSelectedListing from "../../actions/Listings/getSelectedListing";
+import HandleManagers from "../../Components/Managers/HandleManagers";
 
 var mapStoreToProps = (state) => ({
   manager: state.manager,
