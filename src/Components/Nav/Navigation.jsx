@@ -2,9 +2,9 @@ import React from "react";
 
 let Navigation = () => (
   <header id="nav">
+    <p>Home</p>
     <p>Listings</p>
-    <p>Agents</p>
-    <p>Locations</p>
+    <p>Tools</p>
   </header>
 );
 
