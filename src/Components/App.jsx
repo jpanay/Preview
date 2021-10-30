@@ -4,16 +4,12 @@ import Home from "./Home/Home";
 import Listings from "./Listings/Listings";
 import Tools from "./Tools/Tools";
 
-import ListingsContainer from "../containers/Listings/ListingsContainer";
-import InfoModalContainer from "../containers/Modal/InfoModalContainer";
-import GoogleMapContainer from "../containers/Map/GoogleMapContainer";
-
 const App = ({ getListings }) => {
   useEffect(() => {
     getListings("XYZ Properties");
   }, []);
 
-  let page = 'home'
+  let page = 'listings'
 
   if (page === 'home') {
     return (
