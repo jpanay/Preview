@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
-class Listings extends React.Component {
+
+class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -9,10 +10,10 @@ class Listings extends React.Component {
   render() {
     return (
       <>
-        <div>Listings</div>
+        <div>Home</div>
       </>
     );
   }
 }
 
-export default Listings;
+export default Home;

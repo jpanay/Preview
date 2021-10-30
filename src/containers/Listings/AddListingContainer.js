@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import AddListing from "../../Components/Listings/AddListing";
+import AddListing from "../../Components/Tools/Preview/AddListing";
 import getListingsThunk from "../../actions/Listings/getListingsThunk";
 import handleAddListing from "../../actions/Listings/handleAddListing";
 
