@@ -7,8 +7,8 @@ import Tools from "./Tools/Tools";
 import ListingsContainer from "../containers/Listings/ListingsContainer";
 import InfoModalContainer from "../containers/Modal/InfoModalContainer";
 import GoogleMapContainer from "../containers/Map/GoogleMapContainer";
-
-const App = ({ getListings, currentPage, changePage }) => {
+import NavigationContainer from "../containers/Nav/NavigationContainer";
+const App = ({ getListings, currentPage }) => {
   useEffect(() => {
     getListings("XYZ Properties");
   }, []);
@@ -16,7 +16,7 @@ const App = ({ getListings, currentPage, changePage }) => {
   if (currentPage === "home") {
     return (
       <>
-        <Navigation changePage={changePage} />
+        <NavigationContainer />
         <Home />
       </>
     );
@@ -24,7 +24,7 @@ const App = ({ getListings, currentPage, changePage }) => {
   if (currentPage === "listings") {
     return (
       <>
-        <Navigation changePage={changePage} />
+        <NavigationContainer />
         <Listings />
       </>
     );
@@ -32,7 +32,7 @@ const App = ({ getListings, currentPage, changePage }) => {
   if (currentPage === "tools") {
     return (
       <>
-        <Navigation changePage={changePage} />
+        <NavigationContainer />
         <Tools />
       </>
     );
@@ -40,7 +40,7 @@ const App = ({ getListings, currentPage, changePage }) => {
 
   return (
     <>
-      <Navigation changePage={changePage} />
+      <NavigationContainer />
       <div id="main">
         <GoogleMapContainer />
         <ListingsContainer />

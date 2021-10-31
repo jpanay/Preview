@@ -2,7 +2,6 @@ import { connect, dispatch } from "react-redux";
 import getListingsThunk from "../actions/Listings/getListingsThunk.js";
 import getSelectedListing from "../actions/Listings/getSelectedListing";
 import App from "../Components/App";
-import changePage from "../actions/pages/changePage";
 var mapStoreToProps = (state) => ({
   listings: state.listings,
   selectedListing: state.selectedListing,
@@ -15,9 +14,6 @@ var mapDispatchToProps = (dispatch) => ({
   },
   getListings: (manager) => {
     dispatch(getListingsThunk(manager));
-  },
-  changePage: (newPage) => {
-    dispatch(changePage(newPage));
   },
 });
 
