@@ -12,12 +12,8 @@ class Home extends React.Component {
   render() {
     return (
       <>
-        {/* <div>Home</div> */}
         <About />
         <Incentives />
-        <div>Check Out Our Listings!</div>
-        <div>** Button To Listings Here **</div>
-        <div>** One Last Attnetion Grab Here **</div>
       </>
     );
   }

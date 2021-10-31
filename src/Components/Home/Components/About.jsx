@@ -1,9 +1,12 @@
 import React from "react";
+// import Headshot from "../../../Static/headshot.png"
 
 let About = () => (
   <div id="about">
     <div id="about-img">
-      <img src="Headshot.png" alt="Headshot" />
+      <img id="headshot" src='headshot.jpeg' alt="Headshot" />
+      {/* src/Components/Home/Components/About.jsx */}
+      {/* src/Static/headshot.png */}
     </div>
     <div id="about-desc">
       <div id="about-header">More Than An Agent</div>

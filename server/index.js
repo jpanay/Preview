@@ -10,6 +10,7 @@ const GOOGLE_API_KEY = process.env.API_KEY;
 const db = require("./db");
 app.use(express.json());
 app.use(express.static(__dirname + "/../dist"));
+app.use(express.static(__dirname + "/../src/Static"));
 app.use("/", router);
 
 app.listen(port, () => {

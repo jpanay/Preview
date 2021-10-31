@@ -3,21 +3,28 @@
 #about {
   border: 1px solid #2C2C2C;;
   margin: 16px;
+  margin-bottom: 0px;
   display: flex;
   flex-flow: row nowrap;
   max-width: 800px;
+  background-color: white;
 }
 
 #about-img {
   background-color: #afafaf;
-  width: 100%;
+  width: 50%;
   margin-right: 8px;
   border-right: 2px solid #2C2C2C;
+}
+
+#headshot {
+  width: 100%;
 }
 
 #about-desc {
   color: #2C2C2C;
   padding: 8px;
+  align-self: center;
 }
 
 #about-header {
@@ -26,30 +33,34 @@
 }
 
 #incentives {
-  /* border: 2px solid #2C2C2C; */
   margin: 16px;
   display: flex;
   flex-flow: column nowrap;
   max-width: 800px;
+  display: flex;
+  align-items: center;
 }
 
 .incentive-header {
-  /* background-color: #2C2C2C; */
   color: #2C2C2C;
-  border-bottom: 1px solid #2C2C2C;
   text-align: center;
   font-size: 1.5rem;
 }
 
 .incentive-button {
   text-align: center;
-  border: 1px solid #2C2C2C;
-  border-radius: 4px;
+  border: 2px solid #2C2C2C;
+  background-color: #2C2C2C;
+  color: white;
+  border-radius: 2px;
   margin: 4px;
   font-size: 1.25rem;
+  padding: 4px;
+  width: 100%;
 }
 
 .incentive-button:hover {
-  border: 1px solid rgb(255, 232, 184);
+  /* border: 2px solid rgb(255, 232, 184); */
+  color: rgb(255, 232, 184);;
   cursor: pointer;
 }

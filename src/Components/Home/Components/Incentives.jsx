@@ -21,7 +21,13 @@ class Incentives extends React.Component {
           <div className="incentive">
             <div className="incentive-header">Are you overpaying for rent?</div>
             <div className="incentive-button">
-            Get A Free Analysis From Our NYC Rental Expert</div>
+              Get A Free Analysis From Our NYC Rental Expert</div>
+            <div className="incentive-button">
+              Rent Estimator</div>
+          </div>
+          <div className="incentive">
+            <div className="incentive-header">Checkout Our Listings!</div>
+            <div className="incentive-button">All Listings</div>
           </div>
         </div>
       </>

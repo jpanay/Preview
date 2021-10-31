@@ -1,21 +1,33 @@
 #nav {
   display: flex;
   flex-direction: row;
-  padding: 12px;
+  padding: 8px;
   cursor: pointer;
   background-color: #2C2C2C;
+  width: 100%;
 }
 
 #nav-logo {
-  margin-right: 16px;
+  margin: 0px 16px 0px 8px;
+  height: 16px;
+  align-self: center;
+  position: absolute;
 }
 
-#nav > p {
+#nav-items {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+#nav-items > p {
   margin: 0px 8px;
   color: white;
 }
 
-#nav > p:hover {
+#nav-items > p:hover {
   cursor: pointer;
   color: rgb(255, 232, 184);
 }
