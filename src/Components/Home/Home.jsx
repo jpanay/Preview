@@ -1,5 +1,7 @@
 import React from "react";
 import axios from "axios";
+import About from "./Components/About"
+import Incentives from "./Components/Incentives"
 
 class Home extends React.Component {
   constructor(props) {
@@ -10,7 +12,8 @@ class Home extends React.Component {
   render() {
     return (
       <>
-        <div>Home</div>
+        <About />
+        <Incentives />
       </>
     );
   }

@@ -1,5 +1,5 @@
 import { connect, dispatch } from "react-redux";
-import Listings from "../../Components/Tools/Preview/Listings";
+import Listings from "../../Components/Tools/Agents/Preview/Listings";
 
 var mapStoreToProps = (state) => ({
   listings: state.listings,
