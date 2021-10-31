@@ -14,7 +14,7 @@
   background-color: #afafaf;
   width: 50%;
   margin-right: 8px;
-  border-right: 2px solid #2C2C2C;
+  border-right: 1px solid #2C2C2C;
 }
 
 #headshot {
@@ -45,6 +45,8 @@
   color: #2C2C2C;
   text-align: center;
   font-size: 1.5rem;
+  backdrop-filter: blur(1px);
+  border-radius: 8px;
 }
 
 .incentive-button {
