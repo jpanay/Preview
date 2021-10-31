@@ -10,7 +10,7 @@ let initialState = {
   manager: "XYZ Properties",
   managerList: [],
   handlingManagers: false,
-  currentPage: "tools",
+  currentPage: "home",
 };
 
 const store = createStore(rootReducer, initialState, applyMiddleware(thunk));

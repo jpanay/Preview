@@ -1,0 +1,30 @@
+.contact {
+  display: flex;
+}
+
+.book {
+  display: flex;
+}
+
+.book-date {
+
+}
+
+.react-calendar {
+  position: absolute;
+  z-index: 10;
+  bottom: 15px;
+  opacity: 1;
+}
+
+.book-time {
+  
+}
+
+.book-type {
+  
+}
+
+.book-btn {
+  
+}

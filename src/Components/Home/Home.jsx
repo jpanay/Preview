@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import About from "./Components/About"
-import Incentives from "./Components/Incentives"
+import Contact from "./Components/Contact"
 import HomeCarousel from "./Components/Carousel"
 
 class Home extends React.Component {
@@ -14,7 +14,7 @@ class Home extends React.Component {
     return (
       <>
         <About />
-        <Incentives />
+        <Contact />
         <HomeCarousel />
       </>
     );

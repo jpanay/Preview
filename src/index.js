@@ -6,6 +6,7 @@ import "./Styles/home.css";
 import "./Styles/listings.css";
 import "./Styles/tools.css";
 
+import "./Styles/contact.css";
 import "./Styles/managers.css";
 import "./Styles/map.css";
 import "./Styles/infoModal.css";

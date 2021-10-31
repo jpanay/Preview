@@ -53,9 +53,21 @@
   stroke: rgb(255, 232, 184);
 }
 
-.tool-item:hover .tool-item-image {
+/* .tool-item:hover .tool-item-image {
   border: 1px solid rgb(255, 232, 184);
-  /* background-image: url("../Static/fancy-cushion.png"); */
+} */
+
+.tool-item:hover .tool-item-desc {
+  border-top: 1px solid rgb(255, 232, 184);
+}
+
+/* .tool-item:hover .tool-item-title {
+  color: rgb(255, 232, 184);
+} */
+
+.tool-item:hover .tool-item-btn {
+  border: 1px solid rgb(255, 232, 184);
+  /* color: rgb(255, 232, 184); */
 }
 
 .tool-item-image {
@@ -83,7 +95,7 @@
 }
 
 .tool-item-body {
-  padding: 8px;
+  /* padding: 0px 8px; */
   border-top: 2px solid #2C2C2C;
   transition: 300ms;
 }
@@ -97,14 +109,22 @@
 }
 
 .tool-item-desc {
-  
+  border-top: 1px solid white;
+  padding-bottom: 4px;
+  padding: 0px 8px;
+  padding-bottom: 8px;
 }
 
 .tool-item-btn {
-
+  background-color: rgb(31, 31, 31);
+  border: 1px solid white;
+  border-radius: 2px;
+  padding: 4px 0px;
+  transition: 300ms;
 }
 
 .tool-item-btn:hover {
-
+  border: 1px solid rgb(255, 232, 184);
+  color: rgb(255, 232, 184);
 }
 
