@@ -1,0 +1,26 @@
+
+
+#about {
+  border: 2px solid #2C2C2C;;
+  margin: 16px;
+  display: flex;
+  flex-flow: row nowrap;
+  max-width: 800px;
+}
+
+#about-img {
+  background-color: #afafaf;
+  width: 100%;
+  margin-right: 8px;
+  border-right: 2px solid #2C2C2C;
+}
+
+#about-desc {
+  color: #2C2C2C;
+  padding: 8px;
+}
+
+#about-header {
+  font-weight: 600;
+  text-decoration: underline 2px;
+}

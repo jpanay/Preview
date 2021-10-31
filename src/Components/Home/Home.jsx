@@ -12,7 +12,7 @@ class Home extends React.Component {
   render() {
     return (
       <>
-        <div>Home</div>
+        {/* <div>Home</div> */}
         <About />
         <Incentives />
         <div>Check Out Our Listings!</div>

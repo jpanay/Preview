@@ -9,7 +9,7 @@ const App = ({ getListings }) => {
     getListings("XYZ Properties");
   }, []);
 
-  let page = 'listings'
+  let page = 'home'
 
   if (page === 'home') {
     return (
