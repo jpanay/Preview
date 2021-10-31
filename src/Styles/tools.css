@@ -1,0 +1,110 @@
+#tools {
+  margin-top: 62px;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+#tool-type {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.tool-type-btn {
+  background-color: #2C2C2C;
+  border: 1px solid #2C2C2C;
+  margin: 0px 4px;
+  padding: 4px 16px;
+  text-align: center;
+  color: white;
+  border-radius: 4px;
+}
+.tool-type-btn:hover {
+  color: rgb(255, 232, 184);
+  cursor: pointer;
+  border-right: 1px solid rgb(255, 232, 184);
+  border-left: 1px solid rgb(255, 232, 184);
+}
+
+#tools-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.tool-item {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+  background-color: #2C2C2C;
+  border: 1px solid #2C2C2C;
+  border-radius: 4px;
+  margin: 4px 8px;
+  width: 256px;
+  height: 256px;
+  color: white;
+  text-align: center;
+  border: 6px solid #2C2C2C;
+  transition: 300ms;
+  cursor: pointer;
+}
+
+.tool-item:hover .tool-item-image svg {
+  stroke: rgb(255, 232, 184);
+}
+
+.tool-item:hover .tool-item-image {
+  border: 1px solid rgb(255, 232, 184);
+  /* background-image: url("../Static/fancy-cushion.png"); */
+}
+
+.tool-item-image {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  transition: 300ms;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../Static/connectwork.png");
+  background-color: #2C2C2C;
+  background-size: 40%;
+  background-repeat: repeat;
+  backdrop-filter: blur(4px);
+  border: 1px solid white;
+  
+}
+
+.tool-item-image > svg {
+  transition: 300ms;
+  stroke: #ffffff;
+  fill: rgb(44, 39, 27);
+  transform: scale(8);
+  stroke-width: 4px;
+}
+
+.tool-item-body {
+  padding: 8px;
+  border-top: 2px solid #2C2C2C;
+  transition: 300ms;
+}
+
+.tool-item-body:hover {
+  /* border-top: 2px solid rgb(255, 232, 184); */
+}
+
+.tool-item-title {
+
+}
+
+.tool-item-desc {
+  
+}
+
+.tool-item-btn {
+
+}
+
+.tool-item-btn:hover {
+
+}
+

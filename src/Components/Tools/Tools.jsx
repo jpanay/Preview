@@ -1,8 +1,7 @@
 import React from "react";
 import axios from "axios";
-import ListingsContainer from "../../containers/Listings/ListingsContainer";
-import InfoModalContainer from "../../containers/Modal/InfoModalContainer";
-import GoogleMapContainer from "../../containers/Map/GoogleMapContainer";
+import AgentToolList from "./ToolLists/AgentToolList"
+import ClientToolList from "./ToolLists/ClientToolList"
 
 class Tools extends React.Component {
   constructor(props) {
@@ -13,11 +12,13 @@ class Tools extends React.Component {
   render() {
     return (
       <>
-        <div>Tools</div>
-        <div id="main">
-          <GoogleMapContainer />
-          <ListingsContainer />
-          <InfoModalContainer />
+        <div id="tools">
+          <div id="tool-type">
+            <div className="tool-type-btn">Clients</div>
+            <div className="tool-type-btn">Agents</div>
+          </div>
+          <AgentToolList />
+          {/* <ClientToolList /> */}
         </div>
       </>
     );
