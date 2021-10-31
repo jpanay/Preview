@@ -3,42 +3,44 @@ import Navigation from "./Nav/Navigation";
 import Home from "./Home/Home";
 import Listings from "./Listings/Listings";
 import Tools from "./Tools/Tools";
+import ListingsContainer from "../containers/Listings/ListingsContainer";
+import InfoModalContainer from "../containers/Modal/InfoModalContainer";
+import GoogleMapContainer from "../containers/Map/GoogleMapContainer";
+import NavigationContainer from "../containers/Nav/NavigationContainer";
 
-const App = ({ getListings }) => {
+const App = ({ getListings, currentPage }) => {
   useEffect(() => {
     getListings("XYZ Properties");
   }, []);
 
-  let page = 'home'
-
-  if (page === 'home') {
+  if (currentPage === "home") {
     return (
       <>
-        <Navigation />
+        <NavigationContainer />
         <Home />
       </>
-    )
+    );
   }
-  if (page === 'listings') {
+  if (currentPage === "listings") {
     return (
       <>
-        <Navigation />
+        <NavigationContainer />
         <Listings />
       </>
-    )
+    );
   }
-  if (page === 'tools') {
+  if (currentPage === "tools") {
     return (
       <>
-        <Navigation />
+        <NavigationContainer />
         <Tools />
       </>
-    )
+    );
   }
 
   return (
     <>
-      <Navigation />
+      <NavigationContainer />
       <div id="main">
         <GoogleMapContainer />
         <ListingsContainer />

@@ -1,13 +1,13 @@
 import React from "react";
 
-let Navigation = () => (
+let Navigation = ({ changePage }) => (
   <>
     <div id="nav">
-      <img id="nav-logo" src="logo-white.png" alt="Compass / Jason Panay"/>
+      <img id="nav-logo" src="logo-white.png" alt="Compass / Jason Panay" />
       <div id="nav-items">
-        <p>Home</p>
-        <p>Listings</p>
-        <p>Tools</p>
+        <p onClick={() => changePage("home")}>Home</p>
+        <p onClick={() => changePage("listings")}>Listings</p>
+        <p onClick={() => changePage("tools")}>Tools</p>
       </div>
     </div>
   </>
