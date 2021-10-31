@@ -9,19 +9,20 @@ class Incentives extends React.Component {
   render() {
     return (
       <>
-        <div>Incentives</div>
-        <div>
-          {/* Free consultation and quiz incentives */}
-          Looking To Buy, Sell, Or Rent: 
-          {/* Funnel for info */}
-          1. Get A Free Consultation With An NYC Expert
-          {/* Quiz */}
-          2. Take Our Perfect Fit Quiz
-        </div>
-        <div>
-          {/* Free appraisal / comp analysis */}
-          Are you overpaying for rent?
-          Get A Free Analysis From Our NYC Rental Expert
+        <div id="incentives">
+          <div className="incentive">
+            <div className="incentive-header">Looking To Buy, Sell, or Rent?</div>
+            {/* Free consultation and quiz incentives */}
+            <div className="incentive-button">
+              Get A Free Consultation With An NYC Expert</div>
+            <div className="incentive-button">
+              Take Our Perfect Fit Quiz</div>
+          </div>
+          <div className="incentive">
+            <div className="incentive-header">Are you overpaying for rent?</div>
+            <div className="incentive-button">
+            Get A Free Analysis From Our NYC Rental Expert</div>
+          </div>
         </div>
       </>
     );
