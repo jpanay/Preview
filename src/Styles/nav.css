@@ -1,10 +1,12 @@
 #nav {
+  position: absolute;
   display: flex;
   flex-direction: row;
   padding: 8px;
   cursor: pointer;
   background-color: #2C2C2C;
   width: 100%;
+  z-index: 10;
 }
 
 #nav-logo {

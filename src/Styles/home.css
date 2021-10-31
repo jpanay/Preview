@@ -9,6 +9,7 @@
   max-width: 800px;
   background-color: white;
   filter: drop-shadow(-8px 8px 8px #2c2c2c69);
+  margin-top: 56px;
 }
 
 #about-img {
@@ -66,4 +67,26 @@
   /* border: 2px solid rgb(255, 232, 184); */
   color: rgb(255, 232, 184);;
   cursor: pointer;
+}
+
+.legend {
+  background: none !important;
+  cursor: pointer;
+  background-color: rgba(0, 255, 255, 0.452) !important;
+  border: 2px solid red;
+  z-index: 20;
+  height: 100% !important;
+  width: 100% !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  margin-left: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+.legend-label {
+
+}
+
+.legend-btn {
+
 }
