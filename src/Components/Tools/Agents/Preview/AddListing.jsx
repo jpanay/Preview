@@ -69,17 +69,17 @@ class AddListing extends React.Component {
         axios
           .post("/listings", { newListing: this.state })
           .then(({ data }) => {
-            console.log(data);
             this.props.addListing(data);
-
-            // this.setState({ listings: data });
           })
-          .then(() => this.props.getListings())
           .catch((err) => console.log(err));
       })
       .catch((err) => {
         console.log(err);
-      });
+      })
+      .then(() => {
+        this.props.getListings();
+      })
+      .catch((err) => console.log(err));
   }
 
   render() {
