@@ -44,37 +44,33 @@
   height: 256px;
   color: white;
   text-align: center;
-  border: 6px solid #2C2C2C;
-  transition: 300ms;
+  transition: 200ms;
   cursor: pointer;
 }
 
 .tool-item:hover .tool-item-image svg {
-  stroke: rgb(255, 232, 184);
+  filter: drop-shadow(-1px 0px 0px rgba(255, 233, 184, 1));
 }
 
-/* .tool-item:hover .tool-item-image {
-  border: 1px solid rgb(255, 232, 184);
-} */
+.tool-item:hover .tool-item-image {
+  border-bottom: 1px solid rgb(255, 232, 184);
+}
 
 .tool-item:hover .tool-item-desc {
   border-top: 1px solid rgb(255, 232, 184);
 }
 
-/* .tool-item:hover .tool-item-title {
-  color: rgb(255, 232, 184);
-} */
+.tool-item:hover .tool-item-title {
+}
 
 .tool-item:hover .tool-item-btn {
-  border: 1px solid rgb(255, 232, 184);
-  /* color: rgb(255, 232, 184); */
 }
 
 .tool-item-image {
   display: flex;
   height: 100%;
   width: 100%;
-  transition: 300ms;
+  transition: 200ms;
   justify-content: center;
   align-items: center;
   background-image: url("../Static/connectwork.png");
@@ -82,20 +78,26 @@
   background-size: 40%;
   background-repeat: repeat;
   backdrop-filter: blur(4px);
-  border: 1px solid white;
-}
-
-.tool-item-image > svg {
-  transition: 300ms;
-  stroke: #ffffff;
-  fill: rgb(44, 39, 27);
-  transform: scale(5);
-  stroke-width: 8px;
+  border-bottom: 1px solid white;
 }
 
 .tool-item-body {
   border-top: 2px solid #2C2C2C;
-  transition: 300ms;
+  transition: 200ms;
+  padding: 4px;
+}
+
+.tool-item-image > svg {
+  transition: 400ms;
+  stroke: rgb(235, 235, 235);
+  fill: rgb(44, 39, 27);
+  transform: scale(5);
+  stroke-width: 8px;
+  filter: drop-shadow(-1px 0px 1px rgb(255, 232, 184));
+}
+
+.tool-item-title {
+  margin-bottom: 4px;
 }
 
 .tool-item-desc {
@@ -108,17 +110,28 @@
 
 .tool-item-btn {
   background-color: rgb(31, 31, 31);
-  border: 1px solid white;
+  border: 1px solid rgb(17, 17, 17);
   border-radius: 2px;
   padding: 4px 0px;
   transition: 200ms;
 }
 
 .tool-item-btn:hover {
-  /* border: 1px solid rgb(255, 232, 184); */
-  /* border: 1px solid white; */
-  /* color: #2C2C2C; */
-  /* background-color: rgb(255, 232, 184); */
-  /* font-weight: bold; */
+  border: 1px solid rgb(255, 232, 184);
 }
 
+.tool-item-btn > span {
+  margin-right: 4px;
+}
+
+.tool-item-btn > svg {
+  transform: scale(1.4);
+  transition: 200ms;
+  stroke: #2C2C2C;
+  stroke-width: 18px;
+}
+
+.tool-item-btn:hover > svg {
+  stroke: rgb(194, 156, 74);
+  stroke-width: 18px;
+}

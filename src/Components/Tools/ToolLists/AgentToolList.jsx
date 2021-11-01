@@ -1,6 +1,6 @@
 import React from "react";
 import ToolItem from './ToolItem'
-import { faCity } from '@fortawesome/free-solid-svg-icons'
+import { faCameraRetro } from '@fortawesome/free-solid-svg-icons'
 
 class AgentToolList extends React.Component {
   constructor(props) {
@@ -12,7 +12,7 @@ class AgentToolList extends React.Component {
     return (
       <>
         <div id="tools-container">
-          <ToolItem title="Title" desc="The one tool for all tools, shabang" icon={faCity} />
+          <ToolItem title="Preview" desc="The one tool for all tools, shabang" icon={faCameraRetro} />
         </div>
       </>
     );
