@@ -17,14 +17,22 @@
   opacity: 1;
 }
 
-.book-time {
-  
+.contact-button {
+  text-align: center;
+  border: 2px solid #2C2C2C;
+  background-color: #2C2C2C;
+  color: white;
+  border-radius: 4px;
+  margin: 16px 4px;
+  font-size: 1.25rem;
+  padding: 8px 16px;
+  width: 100%;
+  transition: 200ms;
+  border: 2px solid white;
 }
 
-.book-type {
-  
-}
-
-.book-btn {
-  
+.contact-button:hover {
+  border: 2px solid rgb(255, 232, 184);
+  color: rgb(255, 232, 184);;
+  cursor: pointer;
 }

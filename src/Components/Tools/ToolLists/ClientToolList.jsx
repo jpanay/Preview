@@ -1,24 +1,22 @@
 import React from "react";
-import axios from "axios";
-
+import ToolItem from './ToolItem'
+import { faCity } from '@fortawesome/free-solid-svg-icons'
 class ClientToolList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
   }
 
+  // Affordability, Mortgage, Rent Estimator, Rental Investing
+
   render() {
     return (
       <>
         <div id="tools-container">
-          <div className="tool-item">
-            <div className="tool-item-title"></div>
-            <div className="tool-item-image">
-              <img src=""alt="" />
-            </div>
-            <div className="tool-item-body"></div>
-            <div className="tool-item-btn"></div>
-          </div>
+          <ToolItem title="Affordability Calculator" desc="The one tool for all tools, shabang" icon={faCity} />
+          <ToolItem title="Mortgage Calculator" desc="The one tool for all tools, shabang" icon={faCity} />
+          <ToolItem title="Rent Estimator" desc="The one tool for all tools, shabang" icon={faCity} />
+          <ToolItem title="Rental Property Calculator" desc="The one tool for all tools, shabang" icon={faCity} />
         </div>
       </>
     );

@@ -83,29 +83,19 @@
   background-repeat: repeat;
   backdrop-filter: blur(4px);
   border: 1px solid white;
-  
 }
 
 .tool-item-image > svg {
   transition: 300ms;
   stroke: #ffffff;
   fill: rgb(44, 39, 27);
-  transform: scale(8);
-  stroke-width: 4px;
+  transform: scale(5);
+  stroke-width: 8px;
 }
 
 .tool-item-body {
-  /* padding: 0px 8px; */
   border-top: 2px solid #2C2C2C;
   transition: 300ms;
-}
-
-.tool-item-body:hover {
-  /* border-top: 2px solid rgb(255, 232, 184); */
-}
-
-.tool-item-title {
-
 }
 
 .tool-item-desc {
@@ -113,6 +103,7 @@
   padding-bottom: 4px;
   padding: 0px 8px;
   padding-bottom: 8px;
+  font-weight: lighter;
 }
 
 .tool-item-btn {
@@ -120,11 +111,14 @@
   border: 1px solid white;
   border-radius: 2px;
   padding: 4px 0px;
-  transition: 300ms;
+  transition: 200ms;
 }
 
 .tool-item-btn:hover {
-  border: 1px solid rgb(255, 232, 184);
-  color: rgb(255, 232, 184);
+  /* border: 1px solid rgb(255, 232, 184); */
+  /* border: 1px solid white; */
+  /* color: #2C2C2C; */
+  /* background-color: rgb(255, 232, 184); */
+  /* font-weight: bold; */
 }
 

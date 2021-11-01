@@ -6,22 +6,46 @@ import ClientToolList from "./ToolLists/ClientToolList"
 class Tools extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      toolset: 'client'
+    };
+
+    this.setToolset = this.setToolset.bind(this)
+  }
+
+  setToolset(toolset) {
+    console.log(toolset)
+    this.setState({ toolset })
   }
 
   render() {
-    return (
-      <>
-        <div id="tools">
-          <div id="tool-type">
-            <div className="tool-type-btn">Clients</div>
-            <div className="tool-type-btn">Agents</div>
+    if (this.state.toolset === 'client') {
+      return (
+        <>
+          <div id="tools">
+            <div id="tool-type">
+              <div className="tool-type-btn" onClick={() => { this.setToolset('client') }}>Clients</div>
+              <div className="tool-type-btn" onClick={() => { this.setToolset('agent') }}>Agents</div>
+            </div>
+            <ClientToolList />
           </div>
-          <AgentToolList />
-          {/* <ClientToolList /> */}
-        </div>
-      </>
-    );
+        </>
+      );
+    }
+
+    if (this.state.toolset === 'agent') {
+      return (
+        <>
+          <div id="tools">
+            <div id="tool-type">
+              <div className="tool-type-btn" onClick={() => { this.setToolset('client') }}>Clients</div>
+              <div className="tool-type-btn" onClick={() => { this.setToolset('agent') }}>Agents</div>
+            </div>
+            <AgentToolList />
+          </div>
+        </>
+      );
+    }
   }
 }
 
