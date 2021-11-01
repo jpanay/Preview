@@ -34,11 +34,14 @@
   text-decoration: underline 2px rgb(255, 232, 184);
 }
 
+/* Carousel */
 .legend {
   background: none !important;
   cursor: pointer;
-  background-color: rgba(0, 255, 255, 0.452) !important;
-  border: 2px solid red;
+  border: 1px solid #2C2C2C;
+  border-left: 0px solid #2C2C2C;
+  border-radius: 0px !important;
+  opacity: 1 !important;
   z-index: 20;
   height: 100% !important;
   width: 100% !important;
@@ -46,6 +49,27 @@
   bottom: 0 !important;
   margin-left: 0px !important;
   margin-bottom: 0px !important;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.legend-content {
+  /* color: #2C2C2C; */
+  /* background-color: #ffffff; */
+  background-color: #2C2C2C;
+  color: white;
+  border: 1px solid #2C2C2C;
+  width: 60%;
+  height: 60%;
+  padding: 8px;
+  border-radius: 2px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(-4px 4px 4px #2c2c2ca6);
 }
 
 .legend-label {

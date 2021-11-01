@@ -26,17 +26,29 @@ class HomeCarousel extends Component {
                 <div>
                     <img src="slide1.png" className="carousel-img" />
                     <div className="legend">
-                      <div className="legend-label">Take Our Perfect Fit Quiz</div>
-                      <div className="legend-btn">Take Our Perfect Fit Quiz</div>
+                      <div className="legend-content">
+                        <div className="legend-label">Take Our Perfect Fit Quiz</div>
+                        <div className="legend-btn">Take Our Perfect Fit Quiz</div>
+                      </div>
                     </div>
                 </div>
                 <div>
                     <img src="slide2.png" className="carousel-img" />
-                    <p className="legend">Are you overpaying for rent?</p>
+                    <div className="legend">
+                      <div className="legend-content">
+                        <div className="legend-label">Are you overpaying for rent?</div>
+                        <div className="legend-btn">Take Our Perfect Fit Quiz</div>
+                      </div>
+                    </div>
                 </div>
                 <div>
                     <img src="slide3.png" className="carousel-img" />
-                    <p className="legend">Rent Estimator</p>
+                    <div className="legend">
+                      <div className="legend-content">
+                        <div className="legend-label">Rent Estimator</div>
+                        <div className="legend-btn">Take Our Perfect Fit Quiz</div>
+                      </div>
+                    </div>
                 </div>
             </Carousel>
           </div>
