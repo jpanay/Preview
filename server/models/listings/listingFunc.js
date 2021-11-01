@@ -1,8 +1,8 @@
 let Listing = require("./listing");
 
 module.exports = {
-  getAll: (manager) => {
-    return Listing.find({ manager });
+  getAll: () => {
+    return Listing.find({});
   },
   deleteListing: (listingID) => {
     return Listing.findByIdAndDelete(listingID);

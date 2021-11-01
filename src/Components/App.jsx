@@ -10,7 +10,7 @@ import NavigationContainer from "../containers/Nav/NavigationContainer";
 
 const App = ({ getListings, currentPage }) => {
   useEffect(() => {
-    getListings("XYZ Properties");
+    getListings();
   }, []);
 
   if (currentPage === "home") {

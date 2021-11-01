@@ -1,15 +1,10 @@
 import axios from "axios";
 import thunk from "redux-thunk";
 import getListings from "./getListings";
-var getListingsThunk = (manager) => {
-  console.log("this is the thunk", manager);
+var getListingsThunk = () => {
   return (dispatch) => {
     axios
-      .get("/listings", {
-        params: {
-          manager,
-        },
-      })
+      .get("/listings")
       .then(({ data }) => {
         dispatch(getListings(data));
       })
