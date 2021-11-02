@@ -22,8 +22,8 @@ let Listings = ({ listings, filteredListings, manager, handlingManagers }) => {
           <AddListingContainer />
         </>
       )}
-      <div className="sub-heading">All Listings:</div>
-      <div id="listings" className="container listings">
+      
+      <div id="listings">
         {filteredListings.length > 0
           ? filteredListings.map(function (listing, i) {
               return <ListingContainer key={i} listing={listing} />;

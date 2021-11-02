@@ -12,10 +12,7 @@ class ActionBar extends React.Component {
     return (
       <>
         <div id="listings-action-bar">
-          <div>Listings Action Bar</div>
-          <input type="range" min="1" max="100" value="50" class="slider" id="myRange" />
-          <input type="range" min="1" max="100" value="50" class="slider" id="myRange" />
-          <input type="range" min="1" max="100" value="50" class="slider" id="myRange" />
+          <div>Listings Action / Filter Bar</div>
         </div>
       </>
     );
