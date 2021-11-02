@@ -4,13 +4,13 @@ import Marker from "./Marker";
 const GOOGLE_API_KEY = process.env.GOOGLE_API_KEY;
 
 let GoogleMap = ({ listings }) => {
-  let [lat, setLat] = useState(40.73763599999999);
-  let [lng, setLng] = useState(-73.9929658);
-  let [zoom, setZoom] = useState(14);
+  let [lat, setLat] = useState(40.768);
+  let [lng, setLng] = useState(-73.96);
+  let [zoom, setZoom] = useState(12);
   let createMapOptions = {
-    mapTypeId: "hybrid",
-    tilt: 25,
-    mapId: "98fd435c484984e9",
+    // mapTypeId: "hybrid",
+    // tilt: 25,
+    // mapId: "98fd435c484984e9",
   };
 
   return (
