@@ -14,7 +14,6 @@ class Tools extends React.Component {
   }
 
   setToolset(toolset) {
-    console.log(toolset)
     this.setState({ toolset })
   }
 

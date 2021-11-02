@@ -1,26 +1,39 @@
 import React from "react";
-import axios from "axios";
-import ListingsContainer from "../../containers/Listings/ListingsContainer";
-import InfoModalContainer from "../../containers/Modal/InfoModalContainer";
-import GoogleMapContainer from "../../containers/Map/GoogleMapContainer";
-class Listings extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
+import ListingContainer from "../../containers/Listings/ListingContainer";
+import AddListingContainer from "../../containers/Listings/AddListingContainer";
+import FilterListingsContainer from "../../containers/Listings/FilterListingsContainer";
+import HandleManagers from "../Managers/HandleManagers";
 
-  render() {
-    return (
-      <>
-        <div>Listings</div>
-        <div id="main">
-          <GoogleMapContainer />
-          <ListingsContainer />
-          <InfoModalContainer />
-        </div>
-      </>
-    );
-  }
-}
+let Listings = ({ listings, filteredListings, manager, handlingManagers }) => {
+  return (
+    <div id="listings-wrapper">
+
+      <div className="sub-heading">Filter</div>
+      <FilterListingsContainer />
+
+      {handlingManagers ? (
+        <>
+          <div className="sub-heading">Manage Managers</div>
+          <HandleManagers />
+        </>
+      ) : (
+        <>
+          <div className="sub-heading">Add Listing</div>
+          <AddListingContainer />
+        </>
+      )}
+      <div className="sub-heading">All Listings:</div>
+      <div id="listings" className="container listings">
+        {filteredListings.length > 0
+          ? filteredListings.map(function (listing, i) {
+              return <ListingContainer key={i} listing={listing} />;
+            })
+          : listings.map(function (listing, i) {
+              return <ListingContainer key={i} listing={listing} />;
+            })}
+      </div>
+    </div>
+  );
+};
 
 export default Listings;

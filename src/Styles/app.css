@@ -14,26 +14,6 @@ body {
   align-items: center;
 }
 
-#main {
-  display: flex;
-  flex-flow: row-reverse nowrap;
-  height: 100%;
-  width: 100%;
-  padding: 0px 48px;
-}
-
-.main-heading {
-  text-shadow: -2px 2px rgb(134, 200, 255);
-}
-
-.sub-heading {
-  font-size: 1.3rem;
-  margin-top: 8px;
-  padding: 4px 8px 0px 8px;
-  border: 1px solid rgb(180, 180, 180);
-  border-radius: 4px 4px 0px 0px;
-}
-
 .big-checkbox {
   height: 30px;
   cursor: pointer;

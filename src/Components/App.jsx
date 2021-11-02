@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Navigation from "./Nav/Navigation";
 import Home from "./Home/Home";
-import Listings from "./Listings/Listings";
+import Preview from "./Listings/Preview";
 import Tools from "./Tools/Tools";
 import ListingsContainer from "../containers/Listings/ListingsContainer";
 import InfoModalContainer from "../containers/Modal/InfoModalContainer";
@@ -25,7 +25,7 @@ const App = ({ getListings, currentPage }) => {
     return (
       <>
         <NavigationContainer />
-        <Listings />
+        <Preview />
       </>
     );
   }
@@ -37,17 +37,6 @@ const App = ({ getListings, currentPage }) => {
       </>
     );
   }
-
-  return (
-    <>
-      <NavigationContainer />
-      <div id="main">
-        <GoogleMapContainer />
-        <ListingsContainer />
-        <InfoModalContainer />
-      </div>
-    </>
-  );
 };
 
 export default App;

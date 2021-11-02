@@ -1,6 +1,6 @@
 import { connect, dispatch } from "react-redux";
 import getFilteredListings from "../../actions/Listings/getFilteredListings";
-import FilterListings from "../../Components/Tools/Agents/Preview/FilterListings";
+import FilterListings from "../../Components/Listings/FilterListings";
 
 var mapStoreToProps = (state) => ({
   listings: state.listings,
