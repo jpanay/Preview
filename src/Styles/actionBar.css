@@ -1,0 +1,7 @@
+#action-bar-wrapper {
+  margin: 5px 0;
+  display: flex;
+  flex-direction: row;
+  font-size: 1.2rem;
+  align-items: flex-end;
+}
