@@ -1,9 +1,9 @@
 #nav {
-  position: absolute;
+  position: fixed;
   display: flex;
   flex-direction: row;
   padding: 8px;
-  height: 48px;
+  height: 6vh;
   cursor: pointer;
   background-color: #2C2C2C;
   width: 100%;
@@ -34,3 +34,13 @@
   cursor: pointer;
   color: rgb(255, 232, 184);
 }
+
+/* @media only screen and (min-width: 768px) {
+  #nav {
+    height: 4vh;
+    font-size: 2rem;
+  }
+  #nav-logo {
+    height: 1vh;
+  }
+} */

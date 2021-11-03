@@ -6,18 +6,18 @@ class AddListing extends React.Component {
     super(props);
     this.state = {
       manager: "XYZ Properties",
-      address: "280 9th Avenue",
+      address: "",
       full_address: "",
       area: "Manhattan",
       zipcode: "",
       position: { lat: 40.75, lng: -74.01 },
-      unit: "3d",
-      price: 4000,
-      beds: 2,
-      baths: 1,
+      unit: "",
+      price: "",
+      beds: "",
+      baths: "",
       description: "",
       occupied: false,
-      previewed: true,
+      previewed: false,
       listed: false,
     };
     this.handleGeocoding = this.handleGeocoding.bind(this);
