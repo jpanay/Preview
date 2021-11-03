@@ -135,3 +135,26 @@
   stroke: rgb(194, 156, 74);
   stroke-width: 18px;
 }
+
+/* @media only screen and (min-width: 768px) {
+  #tools {
+    margin-top: 8vh;
+    width: 100%;
+  }
+  .tool-type-btn {
+    font-size: 2rem;
+    padding: 16px 32px;
+  }
+  #tools-container {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    width: 100%;
+  }
+  .tool-item {
+    width: 60%;
+    height: 28vh;
+    font-size: 2rem;
+    margin-top: 16px;
+  }
+} */
