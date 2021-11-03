@@ -79,3 +79,45 @@
 .legend-btn {
 
 }
+
+/* @media only screen and (min-width: 768px) {
+  #about {
+    margin-top: 8vh;
+    font-size: 2rem;
+    flex-flow: column nowrap;
+    align-items: center;
+    background-color: #2C2C2C;
+    margin-bottom: 24px;
+    background-image: url("../Static/connectwork.png");
+    background-color: #2C2C2C;
+    background-size: 40%;
+    background-repeat: repeat;
+  }
+  #about-desc {
+    background-color: white;
+    padding: 24px;
+  }
+  #about-img {
+    background-color: rgba(255, 255, 255, 0);
+  }
+  #headshot {
+    border: 8px ridge rgb(255, 232, 184);
+    border-radius: 50%;
+    margin: 48px 0px;
+  }
+  .contact-button {
+    font-size: 2.4rem !important;
+    padding: 36px !important;
+    margin-top: 36px !important;
+    margin-bottom: 48px !important;
+  }
+  .slider {
+    height: 400px !important;
+  }
+  .legend-content {
+    font-size: 2rem;
+  }
+  .carousel .slide img {
+    height: 400px !important;
+  }
+} */
