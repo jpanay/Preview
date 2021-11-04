@@ -5,11 +5,11 @@ import "./Styles/app.css";
 import "./Styles/home.css";
 import "./Styles/listings.css";
 import "./Styles/tools.css";
-
+import "./Styles/actionBar.css";
 import "./Styles/contact.css";
 import "./Styles/managers.css";
 import "./Styles/map.css";
-import "./Styles/infoModal.css";
+import "./Styles/modal.css";
 import "./Styles/marker.css";
 import "./Styles/nav.css";
 import "bootstrap/dist/css/bootstrap.min.css";

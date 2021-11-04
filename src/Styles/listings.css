@@ -60,7 +60,7 @@
   background-color: white;
 }
 
-.listing:hover   {
+.listing:hover {
   cursor: pointer;
 }
 
@@ -69,7 +69,6 @@
 }
 
 .listing-carousel {
-
 }
 
 .listing-section {
@@ -80,7 +79,6 @@
 .listing-section .listing-field {
   padding: 0px 4px;
 }
-
 
 /* @media only screen and (min-width: 768px) {
   #listings-container {

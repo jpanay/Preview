@@ -80,6 +80,7 @@ class AddListing extends React.Component {
         this.props.getListings();
       })
       .catch((err) => console.log(err));
+    this.props.closeModal();
   }
 
   render() {
@@ -205,7 +206,7 @@ class AddListing extends React.Component {
             <option value="Staten Island">Staten Island</option>
           </select>
 
-          <input className="col-2 btn btn-primary" type="submit" value="ADD" />
+          <input className="tool-type-btn col-2" type="submit" value="ADD" />
         </div>
       </form>
     );
