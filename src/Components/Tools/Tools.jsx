@@ -7,7 +7,7 @@ class Tools extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      toolset: 'client'
+      toolset: 'agent'
     };
 
     this.setToolset = this.setToolset.bind(this)

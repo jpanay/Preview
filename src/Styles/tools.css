@@ -20,7 +20,7 @@
   border-radius: 4px;
 }
 .tool-type-btn:hover {
-  color: rgb(255, 232, 184);
+  /* color: rgb(255, 232, 184); */
   cursor: pointer;
   border-right: 1px solid rgb(255, 232, 184);
   border-left: 1px solid rgb(255, 232, 184);
@@ -64,6 +64,12 @@
 }
 
 .tool-item:hover .tool-item-btn {
+  border: 1px solid rgb(255, 232, 184);
+  /* color: rgb(255, 232, 184); */
+}
+
+.tool-item:hover .tool-item-btn svg {
+  opacity: 100%;
 }
 
 .tool-item-image {
@@ -113,7 +119,7 @@
   border: 1px solid rgb(17, 17, 17);
   border-radius: 2px;
   padding: 4px 0px;
-  transition: 200ms;
+  transition: 400ms;
 }
 
 .tool-item-btn:hover {
@@ -126,13 +132,14 @@
 
 .tool-item-btn > svg {
   transform: scale(1.4);
-  transition: 200ms;
+  transition: 400ms;
   stroke: #2C2C2C;
   stroke-width: 18px;
+  opacity: 100%;
+  /* stroke: rgb(255, 232, 184); */
 }
 
 .tool-item-btn:hover > svg {
-  stroke: rgb(194, 156, 74);
   stroke-width: 18px;
 }
 

@@ -11,10 +11,10 @@ class ClientToolList extends React.Component {
     return (
       <>
         <div id="tools-container">
-          <ToolItem title="Affordability Calculator" desc="The one tool for all tools, shabang" icon={faBalanceScaleRight} />
-          <ToolItem title="Mortgage Calculator" desc="The one tool for all tools, shabang" icon={faMoneyCheckAlt} />
-          <ToolItem title="Rent Estimator" desc="The one tool for all tools, shabang" icon={faMapMarkedAlt} />
-          <ToolItem title="Rental Property Calculator" desc="The one tool for all tools, shabang" icon={faCity} />
+          <ToolItem title="Affordability Calculator" desc="How much can I afford?" icon={faBalanceScaleRight} />
+          <ToolItem title="Mortgage Calculator" desc="How much will my monthly payments be?" icon={faMoneyCheckAlt} />
+          <ToolItem title="Rent Estimator" desc="Dont overpay, pre-estimate rent" icon={faMapMarkedAlt} />
+          <ToolItem title="Rental Property Calculator" desc="Can it cashflow?" icon={faCity} />
         </div>
       </>
     );
