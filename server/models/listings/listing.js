@@ -16,6 +16,12 @@ const listingSchema = new Schema({
   occupied: Boolean,
   previewed: Boolean,
   listed: Boolean,
+  images: Array,
+  sqft: Number,
+  city: String,
+  state: String,
+  type: String,
+  hoa: Number
 });
 
 const Listing = mongoose.model("Listing", listingSchema);
